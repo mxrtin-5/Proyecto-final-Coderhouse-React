@@ -17,6 +17,7 @@ body{
     height: 10%;
     background-color: rgb(24, 24, 24);
     display: flex;
+    
 }
 
 .title{
@@ -40,9 +41,8 @@ ul{
     list-style: none;
     padding: auto;
     margin:auto;
-    text-align: center;
     font-size: large;
-    margin-right: 820px;
+    margin-right: 720px;
 }
 
 .navbar ul .li{
