@@ -1,13 +1,11 @@
 import './Navbar.css'
-import { useState } from 'react'
+import { CartWidget } from '../CartWidget/CartWidget'
+
+
+
 
 export const Navbar = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    }
 
     return (
 
@@ -19,10 +17,12 @@ export const Navbar = () => {
                 <ul>
                     <li className='li active'><a href="#"></a>Home</li>
                     <li className='li'><a href="#">Services</a></li>
-                    <li className='li'><a href="#">Sexshop</a></li>
+                    <li className='li'><a href="#">Products</a></li>
                     <li className='li'><a href="#">About</a></li>
                     <li className='li'><a href="#">Contact</a></li>
                 </ul>
+
+                <CartWidget/>
 
             </nav>
 
