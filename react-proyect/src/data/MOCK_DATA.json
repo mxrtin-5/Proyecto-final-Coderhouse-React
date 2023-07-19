@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name":"Item uno",
+        "descripcion": "Lorem...",
+        "price": 59.99,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category":"verduleria"
+    },
+    {
+        "id": 2,
+        "name":"Item dos",
+        "descripcion": "Lorem...",
+        "price": 32,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category":"verduleria"
+    },
+    {
+        "id": 3,
+        "name":"Item tres",
+        "descripcion": "Lorem...",
+        "price": 76,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category":"panaderia"
+    },
+    {
+        "id": 4,
+        "name":"Item cuatro",
+        "descripcion": "Lorem...",
+        "price": 69,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category":"panaderia"
+    },
+    {
+        "id": 5,
+        "name":"Item cinco",
+        "descripcion": "Lorem...",
+        "price": 65,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "carniceria"
+    },
+    {
+        "id": 6,
+        "name":"Item seis",
+        "descripcion": "Lorem...",
+        "price": 65,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "carniceria"
+    },
+    {
+        "id": 7,
+        "name":"Item siete",
+        "descripcion": "Lorem...",
+        "price": 65,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "carniceria"
+    },
+    {
+        "id": 8,
+        "name":"Item ocho",
+        "descripcion": "Lorem...",
+        "price": 65,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "carniceria"
+    }
+]
