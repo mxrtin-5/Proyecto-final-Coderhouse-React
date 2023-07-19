@@ -1,0 +1,50 @@
+.btn-item-count{
+    border-radius: 9px;
+    background-color: blueviolet;
+    color: white;
+    width: 30px;
+    margin: 0px 10px;
+    transition: .3s;
+}
+
+.btn-item-count:hover{
+    background-color: rgb(109, 33, 180);
+}
+
+.span{
+    font-size: x-large;
+    color: black;
+}
+
+.p-minus{
+    font-size: large;
+}
+
+.p-plus{
+    font-size: large;
+}
+
+.comprar-btn{
+    font-size: large;
+}
+
+.container-count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-item-compra{
+    border-radius: 9px;
+    background-color: blueviolet;
+    color: white;
+    width: 50%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn-item-compra:hover{
+    background-color: rgb(109, 33, 180) ;
+}
+

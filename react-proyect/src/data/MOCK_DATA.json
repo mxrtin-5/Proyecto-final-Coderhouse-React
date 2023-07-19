@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name":"Item uno",
+        "stock": 80,
         "descripcion": "Lorem...",
         "price": 59.99,
         "img": "https://dummyimage.com/200x200/000/fff",
@@ -10,6 +11,7 @@
     {
         "id": 2,
         "name":"Item dos",
+        "stock": 20,
         "descripcion": "Lorem...",
         "price": 32,
         "img": "https://dummyimage.com/200x200/000/fff",
@@ -18,6 +20,7 @@
     {
         "id": 3,
         "name":"Item tres",
+        "stock": 40,
         "descripcion": "Lorem...",
         "price": 76,
         "img": "https://dummyimage.com/200x200/000/fff",
@@ -26,6 +29,7 @@
     {
         "id": 4,
         "name":"Item cuatro",
+        "stock": 10,
         "descripcion": "Lorem...",
         "price": 69,
         "img": "https://dummyimage.com/200x200/000/fff",
@@ -34,6 +38,7 @@
     {
         "id": 5,
         "name":"Item cinco",
+        "stock": 50,
         "descripcion": "Lorem...",
         "price": 65,
         "img": "https://dummyimage.com/200x200/000/fff",
@@ -42,24 +47,27 @@
     {
         "id": 6,
         "name":"Item seis",
+        "stock": 200,
         "descripcion": "Lorem...",
-        "price": 65,
+        "price": 93,
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "carniceria"
     },
     {
         "id": 7,
         "name":"Item siete",
+        "stock": 20,
         "descripcion": "Lorem...",
-        "price": 65,
+        "price": 68,
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "perfumeria"
     },
     {
         "id": 8,
         "name":"Item ocho",
+        "stock": 300,
         "descripcion": "Lorem...",
-        "price": 65,
+        "price": 95,
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "perfumeria"
     }

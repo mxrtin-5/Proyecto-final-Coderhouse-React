@@ -1,0 +1,18 @@
+.container{
+    display: grid;
+    place-items: center;
+}
+
+.title-detail-prod{
+    font-size: x-large;
+    font-family:'Times New Roman', Times, serif ;
+}
+
+.descripcion-item{
+    margin-top: 20px;
+    font-size: medium;
+}
+
+.price-item{
+    font-size: medium;
+}
