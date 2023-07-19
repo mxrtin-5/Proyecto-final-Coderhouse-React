@@ -1,4 +1,4 @@
-## ##### Proyecto Final React 
+##### Proyecto Final React 
 
 #### Este es un proyecto que aun no esta definido de que se va a tratar, posiblemente una pagina de ropa
 
