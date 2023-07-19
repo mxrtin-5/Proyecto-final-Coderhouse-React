@@ -1,32 +1,20 @@
+import { Menu } from '../Menu/Menu'
 import './Navbar.css'
-import { CartWidget } from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 
+export const Navbar = () =>{
 
-
-export const Navbar = () => {
-
-
-    return (
+    return(
 
         <header>
-            <nav className='navbar'>
-
-                <h2 className='title'>AtomicMoonlight</h2>
-
-                <ul>
-                    <li className='li active'><a href="#"></a>Home</li>
-                    <li className='li'><a href="#">Services</a></li>
-                    <li className='li'><a href="#">Products</a></li>
-                    <li className='li'><a href="#">About</a></li>
-                    <li className='li'><a href="#">Contact</a></li>
-                </ul>
-
-                <CartWidget/>
-
-            </nav>
-
+            <div className='header_container'>
+                <h2 className='title'> <Link to={'/'}>AtomicMoonlight</Link> </h2>
+                
+                <Menu />
+            </div>  
         </header>
 
+        
     )
 }

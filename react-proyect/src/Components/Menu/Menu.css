@@ -39,14 +39,8 @@
     transition: right .15s ease-in-out .1s;
 }
 
-ul{
-    display: flex;
-    gap: 50px;
-    list-style: none;
-    padding: auto;
-    margin:auto;
-    font-size: large;
-    margin-right: 720px;
+.menulist{
+    background-color: blueviolet;
 }
 
 .menulist__link{
@@ -54,6 +48,7 @@ ul{
     transition:.3s ease all;
     opacity: 1;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .menulist__link :active{
@@ -61,13 +56,28 @@ ul{
 }
 
 .menulist__link:hover{
-    transform: scale(.9) translateY(-10%);
+    transform: scale(.9) translateX(10%);
     opacity: 0.85;
-    color: rgb(37, 5, 66);
+    color: black;
 }
 
 .menu-icon{
     position: fixed;
     right: 40px;
-    top: 20px;
+    top: 42px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+.close-button{
+    display: flex;
+    cursor: pointer;
+    font-size: x-large;
+    margin-left: 140px;
+}
+
+.div-cart{
+    position: fixed;
+    right: 100px;
+    top: 30px;
 }

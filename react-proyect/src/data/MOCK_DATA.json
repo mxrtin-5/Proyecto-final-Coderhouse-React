@@ -53,7 +53,7 @@
         "descripcion": "Lorem...",
         "price": 65,
         "img": "https://dummyimage.com/200x200/000/fff",
-        "category": "carniceria"
+        "category": "perfumeria"
     },
     {
         "id": 8,
@@ -61,6 +61,6 @@
         "descripcion": "Lorem...",
         "price": 65,
         "img": "https://dummyimage.com/200x200/000/fff",
-        "category": "carniceria"
+        "category": "perfumeria"
     }
 ]

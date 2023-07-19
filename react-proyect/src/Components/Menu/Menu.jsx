@@ -2,6 +2,7 @@ import { BiMenu } from 'react-icons/bi'
 import './Menu.css'
 import { MenuList } from './MenuList'
 import { useState} from 'react'
+import { CartWidget } from '../CartWidget/CartWidget'
 
 export const Menu = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -17,11 +18,13 @@ export const Menu = () => {
     return (
         <div className={showMenu ? "menu-active" : ""}> 
             <div>
-                <BiMenu onClick={handleOpen} className='menu-icon text-white text-4xl cursor-pointer'/>
+                <BiMenu onClick={handleOpen} className='menu-icon'/>
+                <CartWidget/>
             </div>
     
             <div className='menu__backdrop' onClick={handleClose}>
                 <MenuList close={handleClose}/>
+                
             </div>
         </div>
     )

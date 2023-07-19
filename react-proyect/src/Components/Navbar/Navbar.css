@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
+    text-decoration: none;
 }
 
 body{
@@ -10,14 +10,9 @@ body{
     color: white;
 }
 
-.navbar{
-    display: block;
-    padding: 30px;
-    width: 100%;
-    height: 10%;
-    background-color: rgb(24, 24, 24);
+.header_container{
     display: flex;
-    
+    margin-bottom: 50px;
 }
 
 .title{
@@ -28,46 +23,9 @@ body{
     font-size: 40px;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    margin-top: 30px;
 }
 
 .title:hover{
-    transform: scale(.97) rotate(-6deg);
     color: blueviolet;
-}
-
-ul{
-    display: flex;
-    gap: 50px;
-    list-style: none;
-    padding: auto;
-    margin:auto;
-    font-size: large;
-    margin-right: 720px;
-}
-
-.navbar ul .li{
-    cursor: pointer;
-    transition:.3s ease all;
-    opacity: 1;
-    border-radius: 5px;
-}
-
-.navbar ul .active{
-    color: blueviolet;
-}
-
-.navbar ul .li:hover{
-    transform: scale(.9) translateY(-10%);
-    opacity: 0.85;
-
-}
-
-.navbar ul .li a{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-
-.navbar ul .li a:hover{
-    color:blueviolet;
 }

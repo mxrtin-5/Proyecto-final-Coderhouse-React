@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 
+
 export const MenuList = ( {close} ) => {
 
 
     return (
         <nav onClick={(e) => e.stopPropagation()}  className="menulist bg-purple-600">
-            <AiOutlineCloseCircle onClick={close} className='ml-auto text-white text-4xl cursor-pointer'/>
+            <AiOutlineCloseCircle onClick={close} className='close-button ml-auto text-white text-4xl cursor-pointer'/>
             <Link onClick={close} className="menulist__link" to="/">Inicio</Link>
             <Link onClick={close} className="menulist__link" to="/productos/verduleria">Verduleria</Link>
             <Link onClick={close} className="menulist__link" to="/productos/perfumeria">Perfumeria</Link>
