@@ -10,7 +10,7 @@ export const ItemList = ({productos}) => {
 
             <div className='flex flex-row flex-wrap justify-center gap-2'>
                 {
-                    productos.map((el) => <ItemCard item={el}/>)
+                    productos.map((el) => <ItemCard key={el.id} item={el}/>)
                 }
             </div>
         </div>

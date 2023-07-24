@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.dak-mode{
+    background-color: rgb(24, 24, 24);
+    color: white;
+}

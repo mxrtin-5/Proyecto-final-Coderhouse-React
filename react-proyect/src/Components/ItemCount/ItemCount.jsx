@@ -1,45 +1,27 @@
-import { useState } from 'react';
-import './ItemCount.css'
 
 
-export const ItemCount = ({stock, initial, onAdd}) =>{
 
-    const [count, setCount] = useState(initial)
+export const ItemCount = ({max, counter, setCounter, agregar}) =>{
 
-    const restar = () =>{
-        if (count > 0){
-            setCount(count -1)
-        }
-    };
+    
 
-    const sumar = () =>{
-        if(count < stock){
-            setCount(count + 1)
-        }
-    };
+    const handleRestar = () =>{
+        counter > 1 && setCounter(counter - 1)
+    }
+
+    const handleSumar = () =>{
+        counter < max && setCounter( counter + 1)
+    }
 
 
     return(
-        <>
-            <div className='container-count'>
-                <button className="btn-item-count" onClick={restar}>
-                    <p className='p-minus'>-</p>
-                </button>
 
-                <span className="span"> {count} </span>
-
-                <button className="btn-item-count" onClick={sumar}>
-                    <p className='p-plus'>+</p>
-                </button>
-
-            </div>
-
-            <button className="btn-item-compra" disabled={count === 0 || stock === 0} onClick={() => onAdd(count)}>
-                <h2 className='comprar-btn'>Comprar</h2>
-            </button>
-
-
-        </>
-        
+        <div>
+            <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
+                <span className="mx-2">{counter}</span>
+            <button onClick={handleSumar} className="btn btn-outline-primary">+</button>
+            <br />
+            <button onClick={agregar} className="btn btn-success">Agregar</button>
+        </div>
     )
 }

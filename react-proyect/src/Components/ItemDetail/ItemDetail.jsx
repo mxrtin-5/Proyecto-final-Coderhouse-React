@@ -1,24 +1,47 @@
-import { ItemCount } from "../ItemCount/ItemCount"
+import { useContext, useState } from 'react'
+import { ItemCount } from '../ItemCount/ItemCount'
 import './ItemDetail.css'
+import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 
 
 
 
-export const ItemDetail = (item) =>{
+export const ItemDetail = ({item}) =>{
 
-    const {name, descripcion, price, stock, img, id} = item;
+    const { agregarAlCarrito, isInCart } = useContext(CartContext)
 
-    const onAdd = (cantidad) =>{
-        alert(`Compraste ${cantidad} items`)
+    console.log(isInCart(item.id))
+
+    const [counter, setCounter] = useState(0)
+
+    const handleAgregar = () =>{
+        const newItem = {
+            ...item,
+            counter
+        }
+
+        agregarAlCarrito(newItem)
     }
+
 
     return(
         <div className="container my-5">
-            <h2 className="title-detail-prod">{name}</h2>
-            <img className="img-detail" src={img} alt={name} />
-            <p className="descripcion-item">{descripcion}</p>
-            <p className="price-item">Precio: ${price}</p>
-            <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+            <h2>{item.nombre}</h2>
+            <img src={item.img} alt={item.nombre} />
+            <p>Precio: ${item.price}</p>
+
+
+            {
+                isInCart (item.id)
+                ? <button className='btn btn-primary'><Link className='btn btn-succes' to="/cart">Terminar mi compra</Link></button>
+                :<ItemCount max={item.stock}
+                counter={counter}
+                setCounter={setCounter}
+                agregar={handleAgregar}
+                />
+            }
+            
         </div>
     )
 }
