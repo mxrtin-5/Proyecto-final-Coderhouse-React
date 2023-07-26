@@ -16,3 +16,17 @@
 .price-item{
     font-size: medium;
 }
+
+.btn-terminar{
+    background-color: blueviolet;
+    transition: .3s;
+    text-decoration: none;
+    width: 80%;
+    height: 160%;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn-terminar:hover{
+    background-color: rgb(113, 20, 201);
+}

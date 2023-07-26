@@ -8,7 +8,7 @@ import { Loader } from "../Loader/Loader"
 
 export const ItemDetailContainer = () =>{
 
-    const [item, setItem] = useState(null)
+    const [item, setItem] = useState({})
     const [loading, setLoading] = useState(false)
 
     const { itemId } = useParams()
@@ -25,11 +25,11 @@ export const ItemDetailContainer = () =>{
     }, [itemId])
 
     return(
-        <div className="container my-5">
+        <div>
             {
                 loading
                     ? <Loader/>
-                    : <ItemDetail {...item}/>
+                    : <ItemDetail item={item}/>
             }
 
         </div>

@@ -36,7 +36,7 @@ export const ItemListContainer = () => {
 
     return (
 
-        <section className='container'>
+        <section>
             {
                 loading 
                     ? <Loader />

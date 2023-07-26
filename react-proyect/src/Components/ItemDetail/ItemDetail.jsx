@@ -13,7 +13,7 @@ export const ItemDetail = ({item}) =>{
 
     console.log(isInCart(item.id))
 
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(1)
 
     const handleAgregar = () =>{
         const newItem = {
@@ -34,7 +34,7 @@ export const ItemDetail = ({item}) =>{
 
             {
                 isInCart (item.id)
-                ? <button className='btn btn-primary'><Link className='btn btn-succes' to="/cart">Terminar mi compra</Link></button>
+                ? <button className='btn-terminar'><Link to="/cart">Terminar mi compra</Link></button>
                 :<ItemCount max={item.stock}
                 counter={counter}
                 setCounter={setCounter}

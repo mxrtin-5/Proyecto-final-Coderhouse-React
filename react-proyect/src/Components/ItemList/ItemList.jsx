@@ -6,7 +6,7 @@ export const ItemList = ({productos}) => {
 
     return (
 
-        <div className="container">
+        <div>
 
             <div className='flex flex-row flex-wrap justify-center gap-2'>
                 {

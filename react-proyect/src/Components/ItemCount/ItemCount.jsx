@@ -1,4 +1,4 @@
-
+import { clases } from "../../helpers/utils"
 
 
 export const ItemCount = ({max, counter, setCounter, agregar}) =>{
@@ -17,7 +17,7 @@ export const ItemCount = ({max, counter, setCounter, agregar}) =>{
     return(
 
         <div>
-            <button onClick={handleRestar} className={`btn mx-2 ${counter === 5 ? "boton-5" : ''} ${counter === 1 ? "btn btn-outline-danger" : "btn btn-outline-primary"}`} disabled={counter === 1}>-</button>
+            <button onClick={handleRestar} className={`btn mx-2 ${counter === 1 ? "btn btn-outline-danger" : "btn-quantity"}`} disabled={counter === 1}>-</button>
                 <span className="mx-2">{counter}</span>
                 <button onClick={handleSumar} className={clases(
             'btn',
