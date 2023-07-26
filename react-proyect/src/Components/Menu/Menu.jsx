@@ -19,7 +19,10 @@ export const Menu = () => {
         <div className={showMenu ? "menu-active" : ""}> 
             <div>
                 <BiMenu onClick={handleOpen} className='menu-icon'/>
-                <CartWidget/>
+                <div className='cart-widget-container'>
+                    <CartWidget className='cart-widget'/>
+                </div>
+                
             </div>
     
             <div className='menu__backdrop' onClick={handleClose}>

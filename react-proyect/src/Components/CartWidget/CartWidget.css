@@ -1,17 +1,28 @@
 .div-cart{
-    position: fixed;
     padding: 8px;
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
 
 .cart{
     width: 35px;
     cursor: pointer;
     transition: all .3s ease;
+    
 }
 
 .cart:hover{
     opacity:.7;
     transform: scale(.9) translateY(-10%);
+}
+
+.icono{
+    margin-right: 5em;
+}
+
+.container-link{
+    position: absolute;
+    top: 4%;
+    right: 5%;;
 }

@@ -17,9 +17,15 @@ export const ItemCount = ({max, counter, setCounter, agregar}) =>{
     return(
 
         <div>
-            <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
+            <button onClick={handleRestar} className={`btn mx-2 ${counter === 5 ? "boton-5" : ''} ${counter === 1 ? "btn btn-outline-danger" : "btn btn-outline-primary"}`} disabled={counter === 1}>-</button>
                 <span className="mx-2">{counter}</span>
-            <button onClick={handleSumar} className="btn btn-outline-primary">+</button>
+                <button onClick={handleSumar} className={clases(
+            'btn',
+            'mx-2',
+            counter === max ? 'btn-outline-danger' : 'btn-outline-primary'
+            )}
+            disabled={counter === max}
+                >+</button> 
             <br />
             <button onClick={agregar} className="btn btn-success">Agregar</button>
         </div>

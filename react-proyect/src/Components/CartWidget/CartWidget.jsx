@@ -11,9 +11,9 @@ export const CartWidget = () => {
 
     return (
         <div className='icono'>
-            <Link to="/cart" className='text-white text-3xl cursor-pointer flex gap-1'>
+            <Link to="/cart" className='container-link text-white text-3xl cursor-pointer flex gap-1'>
                 <FaShoppingCart/>
-                <span className='cart-icon-ndeah'>{totalCantidad()}</span>
+                <span className='span-icon'>{totalCantidad()}</span>
             </Link>
         </div>
     )

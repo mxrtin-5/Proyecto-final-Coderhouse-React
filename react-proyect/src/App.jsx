@@ -4,7 +4,7 @@ import {ItemListContainer}  from './Components/ItemListContainer/ItemListContain
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ItemDetailContainer } from './Components/ItemDetailContainer/ItemDetailContainer';
 import { Contacto } from './Components/Contacto/Contacto';
-import { DarkModeContext } from './context/DarkModeContext';
+import { DarkModeProvider } from './context/DarkModeContext';
 import { CartProvider } from './context/CartContext';
 import { CartView } from './Components/CartView/CartView';
 
@@ -15,7 +15,7 @@ function App() {
 
   return (
 
-    <DarkModeContext>
+    <DarkModeProvider>
       <CartProvider>
         <BrowserRouter>
 
@@ -34,7 +34,7 @@ function App() {
 
         </BrowserRouter>
       </CartProvider>
-    </DarkModeContext>
+    </DarkModeProvider>
     
   )
 }
