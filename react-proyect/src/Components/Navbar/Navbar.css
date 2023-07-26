@@ -28,6 +28,13 @@ body{
     margin-top: 30px;
 }
 
-.title:hover{
+.title-content{
+    text-decoration: none;
     color: blueviolet;
+    transition: all .4s ease-in-out;
+}
+
+.title-content:hover{
+    color: rgb(112, 29, 189);
+    transform: scale(.97) rotate(-6deg);
 }

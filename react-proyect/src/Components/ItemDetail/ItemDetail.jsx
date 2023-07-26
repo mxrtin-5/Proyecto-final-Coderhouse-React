@@ -34,7 +34,7 @@ export const ItemDetail = ({item}) =>{
 
             {
                 isInCart (item.id)
-                ? <button className='btn-terminar'><Link to="/cart">Terminar mi compra</Link></button>
+                ? <button className='btn-terminar'><Link className='btn-terminar-compra' to="/cart">Terminar mi compra</Link></button>
                 :<ItemCount max={item.stock}
                 counter={counter}
                 setCounter={setCounter}

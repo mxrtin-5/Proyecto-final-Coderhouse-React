@@ -30,3 +30,8 @@
 .btn-terminar:hover{
     background-color: rgb(113, 20, 201);
 }
+
+.btn-terminar-compra{
+    text-decoration: none;
+    color: white;
+}

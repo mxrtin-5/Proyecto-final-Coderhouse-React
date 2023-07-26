@@ -9,7 +9,7 @@ export const Navbar = () =>{
 
         <header>
             <div className='header_container'>
-                <h2 className='title'> <Link to={'/'}>AtomicMoonlight</Link> </h2>
+                <h2 className='title'> <Link className='title-content' to={'/'}>AtomicMoonlight</Link> </h2>
                 
                 <Menu />
             </div>  

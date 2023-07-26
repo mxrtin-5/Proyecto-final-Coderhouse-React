@@ -5,15 +5,21 @@
 }
 
 .btn-prod{
+    position: relative;
     background-color: blueviolet;
-    height: 120%;
-    width: 80%;
     border-radius: 8px;
     transition: all .4s ease;
+    width: 160%;
+    height: 50px;
+    right: 23px;
 }
 
 .btn-prod:hover{
     background-color: rgb(113, 20, 201);
+}
+
+.btn{
+    color: white;
 }
 
 .title-prod{

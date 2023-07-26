@@ -1,4 +1,5 @@
 import { clases } from "../../helpers/utils"
+import './itemCount.css'
 
 
 export const ItemCount = ({max, counter, setCounter, agregar}) =>{
@@ -22,12 +23,12 @@ export const ItemCount = ({max, counter, setCounter, agregar}) =>{
                 <button onClick={handleSumar} className={clases(
             'btn',
             'mx-2',
-            counter === max ? 'btn-outline-danger' : 'btn-outline-primary'
+            counter === max ? 'btn-outline-danger' : 'btn-plus'
             )}
             disabled={counter === max}
                 >+</button> 
             <br />
-            <button onClick={agregar} className="btn btn-success">Agregar</button>
+            <button onClick={agregar} className="btn-finalizar">Agregar</button>
         </div>
     )
 }
