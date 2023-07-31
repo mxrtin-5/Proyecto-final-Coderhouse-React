@@ -8,6 +8,7 @@ import { Contacto } from './Components/Contacto/Contacto';
 import { DarkModeProvider } from './context/DarkModeContext';
 import { CartProvider } from './context/CartContext';
 import { CartView } from './Components/CartView/CartView';
+import { ErrorPage } from './Components/ErrorPage/ErrorPage';
 
 
 
@@ -29,7 +30,7 @@ function App() {
               <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }   />
               <Route path='/contacto' element={<Contacto/>} />
               <Route path='/cart' element={ <CartView />} />
-              <Route path='*' element={ <Navigate to={'/'} /> } />
+              <Route path='*' element={ <ErrorPage/> } />
 
             </Routes>
 
