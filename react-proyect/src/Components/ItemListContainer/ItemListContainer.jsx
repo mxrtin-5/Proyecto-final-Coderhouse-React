@@ -1,10 +1,11 @@
-import { pedirDatos } from '../../helpers/PedirDatos'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import './ItemListContainer.css'
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { Loader } from '../Loader/Loader'
+import { collection, getDocs, where, query } from 'firebase/firestore'
+import { db } from '../../firebase/config'
 
 
 
@@ -19,19 +20,26 @@ export const ItemListContainer = () => {
     useEffect(()=>{
         setLoading(true)
 
-        pedirDatos()
-        .then(r=> {
-            if(categoryId){
-                setProductos( r.filter(prod => prod.category === categoryId) )
-            }else{
-                setProductos(r)
-            }
-            
-        })
-        .catch(e => console.log(e))
-        .finally(()=>{
-            setLoading(false)
-        })
+        //1- armar la referencia
+        const productosRef = collection(db, 'productos')
+        const q =categoryId
+                ? query(productosRef, where('category', '==', categoryId))
+                : productosRef
+
+        //2- llamar a esa ref
+        getDocs(q)
+            .then((resp) => {
+                const docs = resp.docs.map((doc) =>{
+                    return{
+                        id: doc.id,
+                        ...doc.data(),
+                    }
+                })
+                console.log(docs)
+                setProductos(docs)
+            })
+            .catch(e => console.log(e))
+            .finally(() => setLoading(false))
     }, [categoryId]);
 
     return (
