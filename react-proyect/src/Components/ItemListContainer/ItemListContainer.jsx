@@ -35,7 +35,6 @@ export const ItemListContainer = () => {
                         ...doc.data(),
                     }
                 })
-                console.log(docs)
                 setProductos(docs)
             })
             .catch(e => console.log(e))
