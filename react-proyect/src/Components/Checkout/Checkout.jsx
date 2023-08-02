@@ -84,7 +84,7 @@ export const Checkout = () =>{
 
     return(
         <div className="formulario">
-            <h2>Checkout</h2>
+            <h2 className="titulo-form">Checkout</h2>
             <hr />
 
             <form onSubmit={handleSubmit}>

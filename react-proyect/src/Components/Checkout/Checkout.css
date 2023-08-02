@@ -34,3 +34,9 @@ input:focus{
 .btn-formulario:hover{
     background-color: rgb(111, 36, 182);
 }
+
+.titulo-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
