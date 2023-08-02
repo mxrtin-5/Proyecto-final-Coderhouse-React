@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext"
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore"
 import { db } from '../../firebase/config'
 import {Link, Navigate} from 'react-router-dom'
+import './Checkout.css'
 
 export const Checkout = () =>{
 
@@ -82,7 +83,7 @@ export const Checkout = () =>{
 
 
     return(
-        <div>
+        <div className="formulario">
             <h2>Checkout</h2>
             <hr />
 
@@ -91,7 +92,7 @@ export const Checkout = () =>{
                     onChange={handleInputChange}
                     value={values.nombre}
                     type="text"
-                    className="form-control my-2"
+                    className=""
                     placeholder="Nombre"
                     name="nombre"
                     />
@@ -99,7 +100,7 @@ export const Checkout = () =>{
                     onChange={handleInputChange}
                     value={values.direccion}
                     type="text"
-                    className="form-control my-4"
+                    className=""
                     placeholder="Direccion"
                     name="direccion"
                     />
@@ -107,11 +108,11 @@ export const Checkout = () =>{
                     onChange={handleInputChange}
                     value={values.email}
                     type="email"
-                    className="form-control my-2"
+                    className=""
                     placeholder="Tu email"
                     name="email"
                     />
-                <button className="btn btn-primary" type="submit">Enviar</button>
+                <button className="btn-formulario" type="submit">Enviar</button>
             </form>
         </div>
     )
