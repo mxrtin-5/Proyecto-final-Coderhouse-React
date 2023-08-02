@@ -1,11 +1,11 @@
 .container{
     display: grid;
     place-items: center;
+    font-family:'Times New Roman', Times, serif ;
 }
 
 .title-detail-prod{
     font-size: x-large;
-    font-family:'Times New Roman', Times, serif ;
 }
 
 .descripcion-item{

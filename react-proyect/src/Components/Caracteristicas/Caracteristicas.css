@@ -1,0 +1,56 @@
+.div-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    background-color: black;
+    padding: 60px;
+    font-family:'Times New Roman', Times, serif ;
+}
+
+.div-icon-money{
+    display: flex;
+}
+
+.icon-money{
+    font-size: 70px;
+}
+
+.div-icon-money h2{
+    font-size: 20px;
+}
+
+.div-icon-card{
+    display: flex;
+}
+
+.div-icon-shipping{
+    display: flex;
+}
+
+.icon-card{
+    font-size: 70px;
+}
+
+.icon-shipping{
+    font-size: 70px;
+}
+
+.div-icon-card h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.div-icon-card p{
+    margin-left: 10px;
+}
+
+.div-icon-shipping h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.div-icon-shipping p{
+    margin-left: 10px;
+}

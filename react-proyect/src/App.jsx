@@ -10,6 +10,8 @@ import { CartProvider } from './context/CartContext';
 import { CartView } from './Components/CartView/CartView';
 import { ErrorPage } from './Components/ErrorPage/ErrorPage';
 import { Checkout } from './Components/Checkout/CHeckout';
+import { Presentation } from './Components/Presentation/Presentation';
+import { Footer } from './Components/Footer/Footer';
 
 
 
@@ -24,6 +26,8 @@ function App() {
 
           <Navbar />
 
+
+
             <Routes>
 
               <Route path='/' element={ <ItemListContainer/> } />
@@ -35,6 +39,8 @@ function App() {
               <Route path='*' element={ <ErrorPage/> } />
 
             </Routes>
+
+            <Footer/>
 
         </BrowserRouter>
       </CartProvider>

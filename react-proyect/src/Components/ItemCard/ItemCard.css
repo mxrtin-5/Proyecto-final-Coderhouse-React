@@ -2,6 +2,7 @@
     display: grid;
     place-items: center;
     margin-bottom: 20px;
+    font-family:'Times New Roman', Times, serif ;
 }
 
 .btn-prod{
@@ -25,6 +26,11 @@
 .title-prod{
     font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    width: 400px;
+    height: 100%;
 }
 
 

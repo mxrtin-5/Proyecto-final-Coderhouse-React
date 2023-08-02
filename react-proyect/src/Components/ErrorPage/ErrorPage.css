@@ -8,3 +8,7 @@
 .btn-back:hover{
     color: rgb(110, 31, 184);
 }
+
+.container{
+    font-family:'Times New Roman', Times, serif ;
+}
