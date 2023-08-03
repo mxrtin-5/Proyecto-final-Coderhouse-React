@@ -5,7 +5,7 @@ import './ItemCard.css'
 export const ItemCard = ({item}) => {
     return (
         <div key={item.id} className='container-prod flex-row'>
-            <div className='container container-prods'>
+            <div className=' container-productos container'>
                 <h4 className='title-prod'>{item.name}</h4>
                 <img className='imagen' src={item.img} alt="" />
                 <p>{item.descripcion}</p>
