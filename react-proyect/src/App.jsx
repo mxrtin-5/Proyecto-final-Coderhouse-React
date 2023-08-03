@@ -9,8 +9,7 @@ import { DarkModeProvider } from './context/DarkModeContext';
 import { CartProvider } from './context/CartContext';
 import { CartView } from './Components/CartView/CartView';
 import { ErrorPage } from './Components/ErrorPage/ErrorPage';
-import { Checkout } from './Components/Checkout/CHeckout';
-import { Presentation } from './Components/Presentation/Presentation';
+import { Checkout } from './Components/Checkout/Checkout';
 import { Footer } from './Components/Footer/Footer';
 
 

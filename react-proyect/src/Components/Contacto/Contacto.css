@@ -1,0 +1,6 @@
+.container-contact{
+    display: grid;
+    place-items: center;
+    font-family:'Times New Roman', Times, serif ;
+    height: 50vh;
+}

@@ -40,3 +40,23 @@ input:focus{
     align-items: center;
     justify-content: center;
 }
+
+.container-compra-registrada{
+    display: grid;
+    place-items: center;
+    height: 50vh;
+    font-family:'Times New Roman', Times, serif ;
+}
+
+.btn-terminar-form{
+    height: 50px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    transition: .3s ease;
+}
+
+.btn-terminar-form:hover{
+    background-color: rgb(111, 36, 182);
+    color: white;
+}
