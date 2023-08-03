@@ -4,3 +4,34 @@
     font-family:'Times New Roman', Times, serif ;
     height: 50vh;
 }
+
+.form-contacto{
+    display: grid;
+    place-items: center;
+    width: 60%;
+    color: black;
+}
+
+.div-form-nombre-apellido{
+    display: flex;
+}
+
+.error-msj-contact{
+    color: white;
+}
+
+.btn-terminar-form-contacto{
+    height: 50px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    transition: .3s ease;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.btn-terminar-form-contacto:hover{
+    background-color: rgb(111, 36, 182);
+    color: white;
+}
+
