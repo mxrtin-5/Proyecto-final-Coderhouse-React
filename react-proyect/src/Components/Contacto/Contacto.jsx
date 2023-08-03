@@ -45,23 +45,23 @@ export const Contacto = () =>{
 
 
 
-    const  handleSubmit = (values) =>{
+    const  handleSubmit = async (values) =>{
 
         setLoading(true)
 
         const coment = collection(db, "mensajes")
 
         const comentario = {
-        nombre: values.nombre,
-        apelido: values.apellido,
-        email: values.email,
-        telefono: values.telefono,
-        mensaje: values.mensaje,
-        fecha: new Date()
+            nombre: values.nombre,
+            apelido: values.apellido,
+            email: values.email,
+            telefono: values.telefono,
+            mensaje: values.mensaje,
+            fecha: new Date()
 
         }
 
-        const doc = addDoc(coment, comentario)
+        const doc = await addDoc(coment, comentario)
 
         setComents(doc)
 
