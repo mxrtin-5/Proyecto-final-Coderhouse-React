@@ -87,7 +87,7 @@ export const Contacto = () =>{
                                 name="nombre" />
                             <ErrorMessage className="error-msj-contact" name="nombre" component="p" />
                             <Field
-                                placeholder="apellido"
+                                placeholder="Apellido"
                                 type="text"
                                 name="apellido" />
                             <ErrorMessage className="error-msj-contact" name="apellido" component="p" />
@@ -98,12 +98,12 @@ export const Contacto = () =>{
                             name="email" />
                         <ErrorMessage className="error-msj-contact" name="email" component="p" />
                         <Field
-                            placeholder="telefono"
+                            placeholder="Telefono"
                             type="text"
                             name="telefono" />
                         <ErrorMessage className="error-msj-contact" name="telefono" component="p" />
                         <Field
-                            placeholder="mensaje"
+                            placeholder="Mensaje"
                             type="textarea"
                             name="mensaje" />
                         <ErrorMessage className="error-msj-contact" name="mensaje" component="p" />
