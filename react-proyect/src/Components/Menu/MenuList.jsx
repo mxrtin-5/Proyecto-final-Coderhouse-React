@@ -5,7 +5,7 @@ import { BiMenu } from 'react-icons/bi'
 import './Menu.css'
 
 
-export const MenuList = ( {close} ) => {
+export const MenuList = (  ) => {
 
     const navRef = useRef();
 
@@ -21,12 +21,12 @@ export const MenuList = ( {close} ) => {
 
         <nav ref={navRef} onClick={(e) => e.stopPropagation()}  className="menulist">
             
-            <Link onClick={close} className="menulist__link" to="/">Inicio</Link>
-            <Link onClick={close} className="menulist__link" to="/productos/verduleria">Verduleria</Link>
-            <Link onClick={close} className="menulist__link" to="/productos/perfumeria">Perfumeria</Link>
-            <Link onClick={close} className="menulist__link" to="/productos/carniceria">Carniceria</Link>
-            <Link onClick={close} className="menulist__link" to="/productos/panaderia">Panaderia</Link>
-            <Link onClick={close} className="menulist__link" to="/contacto">Contacto</Link>
+            <Link onClick={showNavbar} className="menulist__link active" to="/">Inicio</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/verduleria">Verduleria</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/perfumeria">Perfumeria</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/carniceria">Carniceria</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/panaderia">Panaderia</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/contacto">Contacto</Link>
             <button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

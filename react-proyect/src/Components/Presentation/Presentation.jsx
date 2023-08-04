@@ -9,7 +9,7 @@ export const Presentation = () =>{
             <div id='img-portada' className="contenedor-portada">
                 
                     <div className='contenedor-titulo-presentacion'>
-                        <h1 className='titulo-presentacion' >Esto es un titulo</h1>
+                        <h1 className='titulo-presentacion' >Revolution</h1>
                         <p className='subtitulo-presentacion'>Esto es un subtitulo</p>
                     </div>
                 

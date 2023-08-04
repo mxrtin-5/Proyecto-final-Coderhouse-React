@@ -2,13 +2,23 @@
     margin: 0 1rem;
     color: #eee;
 	text-decoration: none;
+	transition: all .3s ease;
+	font-size: 1.4em;
+}
+
+.menulist__link:hover{
+	color: blueviolet;
+}
+
+.menulist .active{
+	color: blueviolet;
 }
 
 .menulist{
     display: grid;
     place-items: center;
     position: absolute;
-    left: 40%;
+    left: 35%;
 
 }
 

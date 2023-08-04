@@ -18,3 +18,15 @@
     position: absolute;
     right: 10%;
 }
+
+@media only screen and (max-width: 660px){
+    .footer{
+        text-align:center;
+    }
+
+    .categories,
+    .contactanos, 
+    .conectados{
+        margin:-2em;
+    }
+}
