@@ -1,3 +1,4 @@
+import { Contacto } from '../Contacto/Contacto'
 import './Footer.css'
 import { Link } from'react-router-dom'
 
@@ -10,7 +11,7 @@ export const Footer = () =>{
             <div className='categories'>
                     <h4>Categorias</h4>
                     <Link to={'/'}><p>Inicio</p></Link>
-                    <Link><p>Contacto</p></Link>
+                    <Link to={'/contacto'}><p>Contacto</p></Link>
                     <Link><p>Talleres</p></Link>
                     
                 </div>

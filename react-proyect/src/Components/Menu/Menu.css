@@ -1,84 +1,26 @@
-.menu__backdrop {
-    background-color: rgba(0, 0, 0, 0.2);
-    position: fixed;
-    inset: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .15s .1s;
-    z-index: 10000;
-}
-
-.menulist {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 100%;
-    position: absolute;
-    width: 200px;
-    right: -400px;
-    padding: 20px;
-    transition: right .15s ease-in-out;
-    border-top-left-radius: 90px;
-    border-bottom-left-radius:90px ;
-}
-
-.menulist__link {
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-    
-}
-
-.menu-active .menu__backdrop{
-    visibility: visible;
-    opacity: 1;
-    transition: all .15s;
-}
-
-.menu-active  .menulist {
-    right: 0px;
-    transition: right .15s ease-in-out .1s;
+.menulist .menulist__link{
+    margin: 0 1rem;
+    color: #eee;
+	text-decoration: none;
 }
 
 .menulist{
-    background-color: blueviolet;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left: 40%;
+
 }
 
-.menulist__link{
-    cursor: pointer;
-    transition:.3s ease all;
-    opacity: 1;
-    border-radius: 5px;
-    text-decoration: none;
-}
 
-.menulist__link :active{
-    color: blueviolet;
-}
-
-.menulist__link:hover{
-    transform: scale(.9) translateX(10%);
-    opacity: 0.85;
-    color: black;
-}
-
-.menu-icon{
-    position: fixed;
-    right: 40px;
-    top: 42px;
-    cursor: pointer;
-    font-size: xx-large;
-}
-
-.close-button{
-    display: flex;
-    cursor: pointer;
-    font-size: x-large;
-    margin-left: 140px;
-}
-
-.div-cart{
-    position: fixed;
-    right: 100px;
-    top: 30px;
+.header_container .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #eee;
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
 }

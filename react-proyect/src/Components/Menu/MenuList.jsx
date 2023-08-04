@@ -1,19 +1,45 @@
 import { Link } from 'react-router-dom'
-import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { FaTimes } from 'react-icons/fa'
+import { useRef } from 'react';
+import { BiMenu } from 'react-icons/bi'
+import './Menu.css'
 
 
 export const MenuList = ( {close} ) => {
 
+    const navRef = useRef();
+
+	const showNavbar = () => {
+		navRef.current.classList.toggle(
+			"responsive_nav"
+		);
+	};
+
 
     return (
-        <nav onClick={(e) => e.stopPropagation()}  className="menulist bg-purple-600">
-            <AiOutlineCloseCircle onClick={close} className='close-button ml-auto text-white text-4xl cursor-pointer'/>
+        <div>
+
+        <nav ref={navRef} onClick={(e) => e.stopPropagation()}  className="menulist">
+            
             <Link onClick={close} className="menulist__link" to="/">Inicio</Link>
             <Link onClick={close} className="menulist__link" to="/productos/verduleria">Verduleria</Link>
             <Link onClick={close} className="menulist__link" to="/productos/perfumeria">Perfumeria</Link>
             <Link onClick={close} className="menulist__link" to="/productos/carniceria">Carniceria</Link>
             <Link onClick={close} className="menulist__link" to="/productos/panaderia">Panaderia</Link>
             <Link onClick={close} className="menulist__link" to="/contacto">Contacto</Link>
+            <button
+					className="nav-btn nav-close-btn"
+					onClick={showNavbar}>
+					<FaTimes />
+			</button>
         </nav>
+
+        <button
+                className="nav-btn"
+                onClick={showNavbar}>
+                <BiMenu />
+        </button>
+
+        </div>
     )
 }

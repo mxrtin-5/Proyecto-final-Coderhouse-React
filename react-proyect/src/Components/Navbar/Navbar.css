@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    font-family:'Times New Roman', Times, serif ;
 }
 
 body{
@@ -12,9 +13,10 @@ body{
 
 .header_container{
     display: flex;
-    margin-bottom: 50px;
-    justify-content: space-between;
-    align-items: baseline;
+	align-items: center;
+	justify-content: space-between;
+	height: 10vh;
+	padding: 0 2rem;
     font-family:'Times New Roman', Times, serif ;
 }
 
@@ -37,4 +39,47 @@ body{
 
 .title-content:hover{
     color: rgb(112, 29, 189);
+}
+
+.header_container div,
+.menulist {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+	.header_container .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.header_container .menulist{
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+        background-color: blueviolet;
+        z-index: 100;
+		gap: 1.5rem;
+		transition: 1s;
+	}
+
+	.header_container .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	.menulist .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	.menulist .menulist__link {
+		font-size: 1.5rem;
+	}
 }
