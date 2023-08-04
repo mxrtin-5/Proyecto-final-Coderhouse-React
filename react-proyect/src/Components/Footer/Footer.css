@@ -19,6 +19,39 @@
     right: 10%;
 }
 
+.p-icono{
+    display: flex;
+    margin-top: 20px;
+}
+
+.categorias{
+    text-decoration: none;
+    color: #eee;
+    transition: .3s;
+}
+
+.categorias:hover{
+    color: blueviolet;
+}
+
+.container-facebook{
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: blueviolet;
+    transition:.5s ease all;
+}
+
+.iconos-facebook-ig{
+    color: white;
+    transition: .3s ease;
+}
+
+.iconos-facebook-ig:hover{
+    color: blueviolet;
+}
+
 @media only screen and (max-width: 660px){
     .footer{
         text-align:center;

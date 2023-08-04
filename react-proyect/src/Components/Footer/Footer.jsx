@@ -1,6 +1,10 @@
-import { Contacto } from '../Contacto/Contacto'
 import './Footer.css'
 import { Link } from'react-router-dom'
+import { BsTelephoneFill } from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa6";
+import { SiWhatsapp } from "react-icons/si";
+import { BiLogoGmail } from "react-icons/bi";
+import { BiLogoInstagram } from "react-icons/bi";
 
 
 export const Footer = () =>{
@@ -10,23 +14,30 @@ export const Footer = () =>{
         <footer className='footer'>
             <div className='categories'>
                     <h4>Categorias</h4>
-                    <Link to={'/'}><p>Inicio</p></Link>
-                    <Link to={'/contacto'}><p>Contacto</p></Link>
-                    <Link><p>Talleres</p></Link>
+                    <Link className='categorias' to={'/'}><p>Inicio</p></Link>
+                    <Link className='categorias' to={'/contacto'}><p>Contacto</p></Link>
+                    <Link className='categorias'><p>Talleres</p></Link>
                     
                 </div>
 
             <div className='contactanos'>
                 <h4>Contactanos</h4>
-                <p>wpp</p>
-                <p>num</p>
-                <p>mail</p>
+                <div className='contenedor-contactanos'>
+                    <p className='p-icono'><SiWhatsapp /> 548113917</p>
+                    <p className='p-icono'> <BsTelephoneFill />548113917</p>
+                    <p className='p-icono'> <BiLogoGmail />ejemplo@gmail.com</p>
+                </div>
+                
             </div>
 
             <div className='conectados'>
                 <h4>Sigamos conectados</h4>
-                <p>link a ig</p>
-                <p>link a facebook</p>
+                <div className='contenedor-conectados'>
+                    <div className='container-facebook'>
+                        <Link className='iconos-facebook-ig' to={'https://www.facebook.com/Mxrt1n5/'}><FaFacebook/></Link>
+                        <Link className='iconos-facebook-ig' to={'https://www.instagram.com/mxrtin_5._/?hl=es'}><BiLogoInstagram/></Link>
+                    </div>
+                </div>
             </div>
 
         </footer>
