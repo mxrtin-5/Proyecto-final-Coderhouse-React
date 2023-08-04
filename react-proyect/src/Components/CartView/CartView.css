@@ -1,7 +1,10 @@
 .container-cart{
     display: grid;
     place-items:center ;
-    height: 54.8vh;
+    height: 100%;
+    margin-bottom: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 45.2vh;
 }
 
 .text-compra{
@@ -37,4 +40,30 @@
 .btn-terminar-compra-cart:hover{
     background-color: rgb(111, 36, 182);
     color: white;
+}
+
+.datos-prods{
+    width: 500px;
+    display: grid;
+    place-items: center;
+    background-color: rgba(189, 188, 188, 0.658);
+    margin: 8vh;
+    border-radius: 30px;
+}
+
+.imagen-detail-prods{
+    height: 400px;
+    width: 400px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px 2px blueviolet;
+    transition: all .4s ease-in-out ;
+}
+
+.imagen-detail-prods:hover{
+    transform: scale(0.9);
+}
+
+
+.p-detail-compra{
+    margin-top: 20px;
 }

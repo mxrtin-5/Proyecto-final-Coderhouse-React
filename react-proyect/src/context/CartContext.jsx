@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
     const totalCompra = () => {
         return cart.reduce((acc, item) => acc + item.price * item.counter, 0)
     }
-
+//! revisar esta funcion que no anda
     const totalCantidad = () => {
         return cart.reduce((acc, item) => acc + item.counter, 0)
     }
