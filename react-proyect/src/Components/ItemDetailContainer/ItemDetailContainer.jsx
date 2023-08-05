@@ -5,6 +5,7 @@ import { Loader } from "../Loader/Loader"
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from "../../firebase/config"
 import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
 

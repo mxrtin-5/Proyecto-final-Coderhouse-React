@@ -1,7 +1,6 @@
 import { MenuList } from './MenuList'
 import { useState} from 'react'
 import { CartWidget } from '../CartWidget/CartWidget'
-import { Link } from 'react-router-dom'
 import './Menu.css'
 import { UserWidget } from '../UserWidget/UserWidget'
 

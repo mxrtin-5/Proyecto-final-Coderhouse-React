@@ -8,8 +8,8 @@ import { db } from '../../firebase/config'
 import { Presentation } from '../Presentation/Presentation'
 import { Caracteristicas } from '../Caracteristicas/Caracteristicas'
 import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import './ItemListContainer.css'
-
 
 
 export const ItemListContainer = () => {
@@ -18,7 +18,7 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const {categoryId} = useParams()
-    
+
     const mySwal = withReactContent(Swal)
 
     useEffect(()=>{
