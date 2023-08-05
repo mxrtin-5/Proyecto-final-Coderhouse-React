@@ -6,6 +6,12 @@
     font-size: 1.3em;
     display:grid;
     place-items: center;
+    border-radius: 40px;
+    background-color:rgba(68, 21, 112, 0.836);
+}
+
+.label-register{
+    margin-bottom: -100px;
 }
 
 .register-button{
@@ -13,9 +19,26 @@
     width: 100px;
     height: 40px;
     border-radius: 20px;
-    margin-top: 80px;
 }
 
 .section-form-register{
     height: 56.4vh;
+    
+}
+
+.div-form-register{
+    width: 100%;
+    height: 80%;
+}
+
+.login-register{
+    display: grid;
+    place-items: center;
+    margin-top: 40px;
+}
+
+.login-link{
+    margin-left: 10em;
+    text-decoration: none;
+    color: blueviolet;
 }

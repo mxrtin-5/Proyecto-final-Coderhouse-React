@@ -5,7 +5,7 @@ import { BiMenu } from 'react-icons/bi'
 import './Menu.css'
 
 
-export const MenuList = (  ) => {
+export const MenuList = () => {
 
     const navRef = useRef();
 
