@@ -65,9 +65,6 @@ export const Contacto = () =>{
 
         setComents(doc)
 
-        console.log(coments)
-
-        console.log(values)
 
         setLoading(false)
     }

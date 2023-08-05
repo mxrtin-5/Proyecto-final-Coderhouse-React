@@ -35,8 +35,6 @@ export const Checkout = () =>{
 
     const handleSubmit = async (values) =>{
         setLoading(true)
-        console.log('submit');
-        console.log(values);
 
         const orden = {
             cliente: values,
@@ -45,7 +43,7 @@ export const Checkout = () =>{
             fyh: new Date()
         }
 
-        console.log(orden)
+
 
         //enviarlo a firebase
 
@@ -80,7 +78,6 @@ export const Checkout = () =>{
             setOrderId(doc.id)
         }else{
             alert('out of stock')
-            console.log(outOfStock);
         }
 
 

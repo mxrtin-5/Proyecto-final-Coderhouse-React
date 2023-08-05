@@ -10,9 +10,6 @@ import { UserWidget } from '../UserWidget/UserWidget'
 export const Menu = () => {
     const [showMenu, setShowMenu] = useState(false)
 
-    const handleOpen = () => {
-        setShowMenu(true)
-    }
 
     const handleClose = () => {
         setShowMenu(false)

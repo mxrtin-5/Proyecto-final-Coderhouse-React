@@ -11,8 +11,6 @@ export const ItemDetail = ({item}) =>{
 
     const { agregarAlCarrito, isInCart } = useContext(CartContext)
 
-    console.log(isInCart(item.id))
-
     const [counter, setCounter] = useState(1)
 
     const handleAgregar = () =>{

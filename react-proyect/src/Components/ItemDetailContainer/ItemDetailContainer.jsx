@@ -4,6 +4,7 @@ import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { Loader } from "../Loader/Loader"
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from "../../firebase/config"
+import Swal from 'sweetalert2'
 
 
 
@@ -13,6 +14,8 @@ export const ItemDetailContainer = () =>{
     const [loading, setLoading] = useState(false)
 
     const { itemId } = useParams()
+
+    const mySwal = withReactContent(Swal)
 
 
     useEffect(()=>{
@@ -30,7 +33,11 @@ export const ItemDetailContainer = () =>{
                 })
             })
             .catch ((error)=>{
-                console.log('Error getting document:', error);
+                    mySwal.fire({
+                        title: <strong>Error</strong>,
+                        html: <i>Ocurrio un error {error}</i>,
+                        icon: 'error'
+                    })
                 })
             .finally(() => setLoading(false))
             

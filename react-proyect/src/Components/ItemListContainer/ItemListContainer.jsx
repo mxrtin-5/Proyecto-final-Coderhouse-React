@@ -7,6 +7,7 @@ import { collection, getDocs, where, query } from 'firebase/firestore'
 import { db } from '../../firebase/config'
 import { Presentation } from '../Presentation/Presentation'
 import { Caracteristicas } from '../Caracteristicas/Caracteristicas'
+import Swal from 'sweetalert2'
 import './ItemListContainer.css'
 
 
@@ -17,6 +18,8 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const {categoryId} = useParams()
+    
+    const mySwal = withReactContent(Swal)
 
     useEffect(()=>{
         setLoading(true)
@@ -38,7 +41,13 @@ export const ItemListContainer = () => {
                 })
                 setProductos(docs)
             })
-            .catch(e => console.log(e))
+            .catch((error)=>{
+                    mySwal.fire({
+                        title: <strong>Error</strong>,
+                        html: <i>Ocurrio un error {error}</i>,
+                        icon: 'error'
+                    })
+                })
             .finally(() => setLoading(false))
     }, [categoryId]);
 
