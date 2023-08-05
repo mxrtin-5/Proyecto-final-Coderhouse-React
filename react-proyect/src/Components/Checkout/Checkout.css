@@ -22,7 +22,7 @@ input:focus{
 
 .btn-formulario{
     position: absolute;
-    top: 40%;
+    top: 45%;
     right: 50%;
     height: 50px;
     width: 80px;
@@ -60,3 +60,4 @@ input:focus{
     background-color: rgb(111, 36, 182);
     color: white;
 }
+

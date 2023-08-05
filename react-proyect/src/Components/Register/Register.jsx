@@ -1,6 +1,7 @@
 import { Field, Form, Formik } from "formik"
 import { useState } from "react"
-
+import { useAuth } from "../../hooks/useContext"
+import './Register.css'
 
 export const Register = () => {
 
@@ -9,32 +10,49 @@ export const Register = () => {
         password: '',
     })
 
+    const { singup } = useAuth()
+
+
     const handleChange = (event) => {
-        console.log(event);
+        setUser({...user, [event.target.name]: event.target.value})
     }
 
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        singup(user.email, user.password)
+    }
     return (
-        <section>
-            <Formik>
-                <Form>
-                    <label htmlFor="email">Email</label>
-                    <Field
-                    onChange={handleChange} 
-                    type="email" 
-                    name="email" 
-                    placeholder="example@company.com" 
-                    />
+        <section className="section-form-register">
+            <Formik initialValues={user}
+            onSubmit={(values)=>{
+                console.log(user);
+            }}
+            >
+                {() => (
+                    <Form onSubmit={handleSubmit} className="formulario-register">
+                        <label htmlFor="email">Email</label>
+                        <Field
+                            onChange={handleChange}
+                            className="form-register"
+                            type="email"
+                            name="email"
+                            placeholder="example@company.com"
+                        />
 
-                    <label htmlFor="password">Password</label>
-                    <Field 
-                    onChange={handleChange} 
-                    type="password" 
-                    placeholder="password" 
-                    name="password" 
-                    id="password" />
-                </Form>
+                        <label htmlFor="password">Password</label>
+                        <Field
+                            onChange={handleChange}
+                            className="form-register"
+                            type="password"
+                            placeholder="password"
+                            name="password"
+                            id="password"
+                        />
 
-                <button>Register</button>
+                        <button onClick={handleSubmit} className="register-button" type="submit">Register</button>
+                    </Form>
+                )}
+
 
             </Formik>
         </section>

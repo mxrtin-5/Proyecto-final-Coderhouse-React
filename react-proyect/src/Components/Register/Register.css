@@ -1,0 +1,21 @@
+.form-register{
+    color: black;
+}
+
+.formulario-register{
+    font-size: 1.3em;
+    display:grid;
+    place-items: center;
+}
+
+.register-button{
+    background-color: blueviolet;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.section-form-register{
+    height: 56.4vh;
+}

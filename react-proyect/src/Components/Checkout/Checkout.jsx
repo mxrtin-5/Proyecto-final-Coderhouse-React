@@ -5,6 +5,8 @@ import { db } from '../../firebase/config'
 import { Link, Navigate} from 'react-router-dom'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import './Checkout.css'
 
 
@@ -32,6 +34,8 @@ export const Checkout = () =>{
 
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState(null)
+
+    const mySwal = withReactContent(Swal)
 
     const handleSubmit = async (values) =>{
         setLoading(true)
