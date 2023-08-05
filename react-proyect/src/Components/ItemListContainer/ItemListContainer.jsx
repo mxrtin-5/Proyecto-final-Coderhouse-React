@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import './ItemListContainer.css'
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { Loader } from '../Loader/Loader'
@@ -8,7 +7,7 @@ import { collection, getDocs, where, query } from 'firebase/firestore'
 import { db } from '../../firebase/config'
 import { Presentation } from '../Presentation/Presentation'
 import { Caracteristicas } from '../Caracteristicas/Caracteristicas'
-
+import './ItemListContainer.css'
 
 
 

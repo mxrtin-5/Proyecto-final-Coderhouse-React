@@ -1,7 +1,11 @@
-import './Menu.css'
 import { MenuList } from './MenuList'
 import { useState} from 'react'
 import { CartWidget } from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
+import './Menu.css'
+import { UserWidget } from '../UserWidget/UserWidget'
+
+
 
 export const Menu = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -22,6 +26,8 @@ export const Menu = () => {
 
 
                 <MenuList close={handleClose}/>
+
+                <UserWidget />
 
                 <div className='cart-widget-container'>
                     <CartWidget className='cart-widget'/>

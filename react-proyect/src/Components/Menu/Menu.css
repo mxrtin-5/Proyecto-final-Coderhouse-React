@@ -22,7 +22,6 @@
 
 }
 
-
 .header_container .nav-btn {
 	padding: 5px;
 	cursor: pointer;
@@ -33,4 +32,15 @@
 	visibility: hidden;
 	opacity: 0;
 	font-size: 1.8rem;
+}
+
+.user-widget{
+	width: 100%;
+	cursor: pointer;
+	font-size: 1.2em;
+	margin-right: 10px;
+}
+
+.cart-widget-container{
+	margin-top: 10px;
 }
