@@ -17,6 +17,10 @@
     width: 15em;
 }
 
+.form-login:focus{
+    outline: none;
+}
+
 .a-login{
     text-decoration: none;
     color: white;
