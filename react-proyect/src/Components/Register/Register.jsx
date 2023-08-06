@@ -1,8 +1,6 @@
-import { Field, Form, Formik } from "formik"
 import { useState } from "react"
 import { useAuth } from "../../hooks/useAuth"
-import { useNavigate } from 'react-router-dom'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from 'react-router-dom'
 import './Register.css'
 
 export const Register = () => {
@@ -18,7 +16,8 @@ export const Register = () => {
 
     const { signup } = useAuth()
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault()
         setError("");
         try {
             await signup(user.email, user.password);
@@ -27,38 +26,37 @@ export const Register = () => {
             setError(error.message);
         }
     }
+
     return (
         <section className="section-form-register">
             <div className="div-form-register">
-                {error && <p>{error}</p>}
-
-                <Formik initialValues={user}
-                    onSubmit={handleSubmit}
-                >
-                    {() => (
-                        <Form className="container formulario-register">
+            {error &&  console.log(error)}
+                        <form
+                            className="container formulario-register"
+                            onSubmit={handleSubmit}
+                        >
                             <label className="label-register" htmlFor="email">Email</label>
-                            <Field
+                            <input
                                 className="form-register"
                                 type="email"
                                 name="email"
                                 id="email"
                                 placeholder="example@company.com"
+                                onChange={(e) => setUser({ ...user, email: e.target.value })}
                             />
 
                             <label className="label-register" htmlFor="password">Password</label>
-                            <Field
+                            <input
                                 className="form-register"
                                 type="password"
                                 placeholder="password"
                                 name="password"
                                 id="password"
+                                onChange={(e) => setUser({ ...user, password: e.target.value })}
                             />
 
-                            <button onClick={handleSubmit} className="register-button" type="submit">Register</button>
-                        </Form>
-                    )}
-                </Formik>
+                            <button className="register-button" type="submit">Register</button>
+                        </form>
             </div>
 
             <div className="login-register">
