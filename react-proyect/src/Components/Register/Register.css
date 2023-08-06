@@ -2,6 +2,10 @@
     color: black;
 }
 
+.form-register:focus{
+    outline: none;
+}
+
 .formulario-register{
     font-size: 1.3em;
     display:grid;
@@ -19,6 +23,11 @@
     width: 100px;
     height: 40px;
     border-radius: 20px;
+    transition: all .3s;
+}
+
+.register-button:hover{
+    background-color:  rgb(101, 32, 165);
 }
 
 .section-form-register{
