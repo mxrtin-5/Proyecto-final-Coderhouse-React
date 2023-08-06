@@ -79,27 +79,32 @@ export const Contacto = () =>{
                     <Form className="form-contacto">
                         <div className="div-form-nombre-apellido">
                             <Field
+                                className="form-contact"
                                 placeholder="Tu nombre"
                                 type="text"
                                 name="nombre" />
                             <ErrorMessage className="error-msj-contact" name="nombre" component="p" />
                             <Field
+                                className="form-contact"
                                 placeholder="Apellido"
                                 type="text"
                                 name="apellido" />
                             <ErrorMessage className="error-msj-contact" name="apellido" component="p" />
                         </div>
                         <Field
+                            className="form-contact"
                             placeholder="Tu email"
                             type="email"
                             name="email" />
                         <ErrorMessage className="error-msj-contact" name="email" component="p" />
                         <Field
+                            className="form-contact"
                             placeholder="Telefono"
                             type="text"
                             name="telefono" />
                         <ErrorMessage className="error-msj-contact" name="telefono" component="p" />
                         <Field
+                            className="form-contact"
                             placeholder="Mensaje"
                             type="textarea"
                             name="mensaje" />

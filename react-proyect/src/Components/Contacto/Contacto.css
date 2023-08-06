@@ -12,6 +12,10 @@
     color: black;
 }
 
+.form-contact:focus{
+    outline: none;
+}
+
 .div-form-nombre-apellido{
     display: flex;
     width: 100%;
