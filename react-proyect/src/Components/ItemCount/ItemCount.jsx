@@ -1,10 +1,11 @@
 import { clases } from "../../helpers/utils"
+import { useState } from "react"
 import './itemCount.css'
 
 
-export const ItemCount = ({max, counter, setCounter, agregar}) =>{
+export const ItemCount = ({max, initial, agregar}) =>{
 
-    
+    const [counter, setCounter] = useState(initial);
 
     const handleRestar = () =>{
         counter > 1 && setCounter(counter - 1)
@@ -28,7 +29,7 @@ export const ItemCount = ({max, counter, setCounter, agregar}) =>{
             disabled={counter === max}
                 >+</button> 
             <br />
-            <button onClick={agregar} className="btn-finalizar">Agregar</button>
+            <button onClick={() => agregar(counter)} className="btn-finalizar">Agregar</button>
         </div>
     )
 }
