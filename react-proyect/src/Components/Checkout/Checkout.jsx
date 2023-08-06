@@ -124,11 +124,11 @@ export const Checkout = () =>{
 
             {() =>(
                 <Form>
-                    <Field placeholder="Tu nombre" type="text" name="nombre"/>
-                    <ErrorMessage name="nombre" component="p"/>
-                        <Field placeholder="Tu direccion" type="text" name="direccion"/>
+                        <Field className="checkout-form-field" placeholder="Tu nombre" type="text" name="nombre"/>
+                        <ErrorMessage name="nombre" component="p"/>
+                        <Field className="checkout-form-field" placeholder="Tu direccion" type="text" name="direccion"/>
                         <ErrorMessage name="direccion" component="p"/>
-                        <Field placeholder="Tu email" type="email" name="email"/>
+                        <Field className="checkout-form-field" placeholder="Tu email" type="email" name="email"/>
                         <ErrorMessage name="email" component="p"/>
                         <button className="btn btn-formulario" disabled={loading}>Enviar</button>
                 </Form>

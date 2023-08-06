@@ -61,3 +61,6 @@ input:focus{
     color: white;
 }
 
+.checkout-form-field:focus{
+    outline: none;
+}
