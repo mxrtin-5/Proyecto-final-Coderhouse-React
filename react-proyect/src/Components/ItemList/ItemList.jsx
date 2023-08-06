@@ -1,4 +1,4 @@
-import { useAuth } from "../../hooks/useContext"
+import { useAuth } from "../../hooks/useAuth"
 import { ItemCard } from "../ItemCard/ItemCard"
 import './ItemList.css'
 

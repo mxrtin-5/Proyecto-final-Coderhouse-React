@@ -1,6 +1,6 @@
 import { Field, Form, Formik } from "formik"
 import { useState } from "react"
-import { useAuth } from "../../hooks/useContext"
+import { useAuth } from "../../hooks/useAuth"
 import { useNavigate } from 'react-router-dom'
 import { Link } from "react-router-dom"
 import './Register.css'
