@@ -10,7 +10,7 @@ import withReactContent from 'sweetalert2-react-content'
 
 
 
-export const ItemDetail = ({item}) =>{
+export const ItemDetail = ({ item }) => {
 
     const { agregarAlCarrito, isInCart } = useContext(CartContext)
 
@@ -18,7 +18,7 @@ export const ItemDetail = ({item}) =>{
 
     const mySwal = withReactContent(Swal)
 
-    const handleAgregar = () =>{
+    const handleAgregar = (counter) => {
         const newItem = {
             ...item,
             counter
@@ -28,7 +28,7 @@ export const ItemDetail = ({item}) =>{
     }
 
 
-    return(
+    return (
         <div className="container my-5">
             <h2>{item.name}</h2>
             <img className='imagen' src={item.img} alt={item.name} />
@@ -36,19 +36,26 @@ export const ItemDetail = ({item}) =>{
 
 
             {
-                isInCart (item.id)
-                ? <button onClick={mySwal.fire({
-                    title: <strong>Articulo agregado</strong>,
-                    html: <i>El articulo se agrego correctamente al carrito</i>,
-                    icon: 'success'
-                })} className='btn-terminar'><Link className='btn-terminar-compra' to="/cart">Terminar mi compra</Link></button>
-                :<ItemCount max={item.stock}
-                counter={counter}
-                setCounter={setCounter}
-                agregar={handleAgregar}
-                />
-            }
-            
-        </div>
+                isInCart(item.id) ?
+                <div>                        
+                    <button                  
+                    onClick={mySwal.fire({   
+                        title: <strong>Articulo agregado</strong>,
+                        html: <i>El articulo se agrego correctamente al carrito</i>,
+                        icon: 'success'
+                    })}
+                    className='btn-terminar'>
+                </button>
+                <Link className='btn-terminar-compra' to="/cart" >
+                        Terminar mi compra
+                    </Link>
+                </div>                                
+    : <ItemCount max={item.stock}
+        initial={1} 
+        agregar={handleAgregar}
+    />
+}
+
+        </div >
     )
 }
