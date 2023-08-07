@@ -64,9 +64,9 @@ export function Login() {
             {error && <Alert message={error} />}
 
             {
-                user
+                user.email !== ''
                     ? <div>
-                        <h2>Welcome{user.email}</h2>
+                        <h2>Welcome {user.email}</h2>
                         <button onClick={handleLogout} className="boton-log-out">LogOut</button>
                     </div>
                     : <div>
