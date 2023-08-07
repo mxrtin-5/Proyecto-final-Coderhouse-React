@@ -82,3 +82,10 @@
 .boton-log-out:hover{
     background-color: rgb(101, 32, 165);
 }
+
+
+@media only screen and (max-width: 1500px){
+    .formulario-login{
+        width: 55vw;
+    }
+}
