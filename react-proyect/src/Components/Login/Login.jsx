@@ -1,10 +1,9 @@
-import { Field, Form, Formik } from "formik"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { useAuth } from "../../hooks/useAuth"
+import { Alert } from "../Alerts/Alerts"
 import * as Yup from 'yup'
 import './Login.css'
-
-
 
 
 
@@ -17,68 +16,95 @@ const schema = Yup.object().shape({
 })
 
 
-export const Login = () => {
+export function Login() {
+    const [user, setUser] = useState({
+        email: "",
+        password: "",
+    });
 
-    const [loading, setLoading] = useState(false)
+    const { login, logOut, loginWithGoogle, resetPassword } = useAuth();
 
-    const handleSubmit = async (values) => {
+    const [error, setError] = useState("");
 
-        setLoading(true)
+    const navigate = useNavigate();
 
 
-        const user = {
-            email: values.email,
-            password: values.password
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError("");
+        try {
+            await login(user.email, user.password);
+            navigate("/");
+        } catch (error) {
+            setError(error.message);
         }
+    };
 
-        console.log(values)
+    const handleGoogleSignin = async () => {
+        try {
+            await loginWithGoogle();
+            navigate("/");
+        } catch (error) {
+            setError(error.message);
+        }
+    };
 
-        setLoading(false)
-    }
+    const handleResetPassword = async (e) => {
+        e.preventDefault();
+        if (!user.email) return setError("Write an email to reset password");
+        try {
+            await resetPassword(user.email);
+            setError('We sent you an email. Check your inbox')
+        } catch (error) {
+            setError(error.message);
+        }
+    };
+
+    console.log(user);
+    const handleLogout = async () => {
+        try {
+            await logOut();
+        } catch (error) {
+            console.error(error.message);
+        }
+    };
+
 
     return (
         <section className="login-section">
             <div className="div-form-login">
-                <Formik
-                    initialValues={{
-                        email: '',
-                        password: ''
-                    }}
-                    onSubmit={handleSubmit}
-                    validationSchema={schema}
-                >
-                    {
-                        () => (
-                            <Form className="container formulario-login">
-                                <label htmlFor="email">Email</label>
-                                <Field className="form-login" placeholder="Ingrese su Email" type="email" name="email" id="email" />
-                                <label htmlFor="password">Password</label>
-                                <Field className="form-login" placeholder="Contraseña" type="password" name="password" id="password" />
+
+                <form className="container formulario-login" onSubmit={handleSubmit}>
+                    <label htmlFor="email">Email</label>
+                    <input onChange={(e) => setUser({ ...user, email: e.target.value })} className="form-login" placeholder="Ingrese su Email" type="email" name="email" id="email" />
+                    <label htmlFor="password">Password</label>
+                    <input onChange={(e) => setUser({ ...user, password: e.target.value })}  className="form-login" placeholder="Contraseña" type="password" name="password" id="password" />
 
 
-                                <div className="flex items-center justify-center gap-20 mt-10">
-                                    <button
-                                        className="button-login text-white font-bold py-1.5 px-4 rounded "
-                                        type="submit"
-                                    >
-                                        Sign In
-                                    </button>
-                                    <a
-                                        className="a-login align-baseline font-bold text-sm"
-                                        href="#!"
-                                    >
-                                        Forgot Password?
-                                    </a>
-                                </div>
-                            </Form>
-                        )
-                    }
-                </Formik>
+                    <div className="flex items-center justify-center gap-20 mt-10">
+                        <button
+                            onClick={handleSubmit}
+                            className="button-login text-white font-bold py-1.5 px-4 rounded "
+                            type="submit"
+                        >
+                            Sign In
+                        </button>
+                        <a
+                            onClick={handleResetPassword}
+                            className="a-login align-baseline font-bold text-sm"
+                            href="#!"
+                        >
+                            Forgot Password?
+                        </a>
+                    </div>
+                </form>
+
+
             </div>
             <div className="div-google-login">
 
-                <button 
+                <button
+                    onClick={handleGoogleSignin}
                     className="button-login-google"
                 >
                     Google login
@@ -90,8 +116,17 @@ export const Login = () => {
                     </Link>
                 </p>
 
+                <button onClick={handleLogout} className="boton-log-out">LogOut</button>
+
 
             </div>
+
+                {
+                    user
+                    ? <h2>Welcome {user.email}</h2>
+                    :''
+                }
+
         </section>
     )
 }

@@ -1,5 +1,5 @@
 .login-section{
-    height: 56.4vh;
+    height: 66.4vh;
 }
 
 .formulario-login{
@@ -68,4 +68,17 @@
 
 .link-to-register:hover{
     color: rgb(101, 32, 165);
+}
+
+.boton-log-out{
+    display: flex;
+    margin-left: 43%;
+    background-color: blueviolet;
+    padding: 8px;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.boton-log-out:hover{
+    background-color: rgb(101, 32, 165);
 }
