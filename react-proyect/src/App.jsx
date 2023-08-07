@@ -37,7 +37,9 @@ function App() {
                   <Route path='/' element={ <ProtectedRoute>
                     <ItemListContainer/>
                   </ProtectedRoute> } />
-                  <Route path='/productos/:categoryId' element={ <ItemListContainer/> } />
+                  <Route path='/productos/:categoryId' element={ <ProtectedRoute>
+                    <ItemListContainer/>
+                  </ProtectedRoute> } />
                   <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }   />
                   <Route path='/user' element={< Login/>}/>
                   <Route path='/register' element={ <Register/> } />

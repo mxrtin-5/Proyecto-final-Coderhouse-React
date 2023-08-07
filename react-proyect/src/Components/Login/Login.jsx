@@ -6,12 +6,12 @@ import './Login.css'
 
 
 export function Login() {
-    const [user, setUser] = useState({
+    const [usuario, setUsuario] = useState({
         email: "",
         password: "",
     });
 
-    const { login, logOut, loginWithGoogle, resetPassword } = useAuth();
+    const { login, logOut, user, loginWithGoogle, resetPassword } = useAuth();
 
     const [error, setError] = useState("");
 
@@ -22,7 +22,7 @@ export function Login() {
         e.preventDefault();
         setError("");
         try {
-            await login(user.email, user.password);
+            await login(usuario.email, usuario.password);
             navigate("/");
         } catch (error) {
             setError(error.message);
@@ -40,16 +40,16 @@ export function Login() {
 
     const handleResetPassword = async (e) => {
         e.preventDefault();
-        if (!user.email) return setError("Write an email to reset password");
+        if (!usuario.email) return setError("Write an email to reset password");
         try {
-            await resetPassword(user.email);
+            await resetPassword(usuario.email);
             setError('We sent you an email. Check your inbox')
         } catch (error) {
             setError(error.message);
         }
     };
 
-    console.log(user);
+    console.log(usuario);
     const handleLogout = async () => {
         try {
             await logOut();
@@ -64,7 +64,7 @@ export function Login() {
             {error && <Alert message={error} />}
 
             {
-                user.email !== ''
+                user
                     ? <div>
                         <h2>Welcome {user.email}</h2>
                         <button onClick={handleLogout} className="boton-log-out">LogOut</button>
@@ -74,9 +74,9 @@ export function Login() {
 
                             <form className="container formulario-login" onSubmit={handleSubmit}>
                                 <label htmlFor="email">Email</label>
-                                <input onChange={(e) => setUser({ ...user, email: e.target.value })} className="form-login" placeholder="Ingrese su Email" type="email" name="email" id="email" />
+                                <input onChange={(e) => setUsuario({ ...usuario, email: e.target.value })} className="form-login" placeholder="Ingrese su Email" type="email" name="email" id="email" />
                                 <label htmlFor="password">Password</label>
-                                <input onChange={(e) => setUser({ ...user, password: e.target.value })} className="form-login" placeholder="Contraseña" type="password" name="password" id="password" />
+                                <input onChange={(e) => setUsuario({ ...usuario, password: e.target.value })} className="form-login" placeholder="Contraseña" type="password" name="password" id="password" />
 
 
                                 <div className="flex items-center justify-center gap-20 mt-10">

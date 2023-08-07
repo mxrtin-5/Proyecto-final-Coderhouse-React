@@ -14,6 +14,7 @@ import { auth } from '../firebase/config'
 export const authContext = createContext()
 
 export function AuthProvider({ children }) {
+
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -30,7 +31,7 @@ export function AuthProvider({ children }) {
         return signInWithPopup(auth, googleProvider);
     };
 
-    const logOut = () => signOut(auth);
+    const logOut = () => signOut(auth).then(() => console.log('sign out succesful', {auth}))
 
     const resetPassword = async (email) => sendPasswordResetEmail(auth, email);
 
