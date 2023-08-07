@@ -14,6 +14,7 @@ import { Footer } from './Components/Footer/Footer';
 import { Login } from './Components/Login/Login';
 import { Register } from './Components/Register/Register';
 import { AuthProvider } from './context/authContext';
+import { ProtectedRoute } from './Components/ProtectedRoute/ProtectedRoute';
 
 
 
@@ -33,12 +34,14 @@ function App() {
 
             <Routes>
 
-                  <Route path='/' element={ <ItemListContainer/> } />
+                  <Route path='/' element={ <ProtectedRoute>
+                    <ItemListContainer/>
+                  </ProtectedRoute> } />
                   <Route path='/productos/:categoryId' element={ <ItemListContainer/> } />
                   <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }   />
                   <Route path='/user' element={< Login/>}/>
-                  <Route path='/register' element={<Register/>} />
-                  <Route path='/contacto' element={<Contacto/> } />
+                  <Route path='/register' element={ <Register/> } />
+                  <Route path='/contacto' element={ <Contacto/> } />
                   <Route path='/cart' element={ <CartView /> } />
                   <Route path='/checkout' element={ <Checkout /> } />
                   <Route path='*' element={ <ErrorPage/> } />

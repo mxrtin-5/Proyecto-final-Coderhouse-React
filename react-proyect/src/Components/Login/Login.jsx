@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import { useAuth } from "../../hooks/useAuth"
+import { Alert } from "../Alerts/Alerts";
 import './Login.css'
 
 
@@ -60,60 +61,69 @@ export function Login() {
 
     return (
         <section className="login-section">
-            <div className="div-form-login">
+            {error && <Alert message={error} />}
 
-                <form className="container formulario-login" onSubmit={handleSubmit}>
-                    <label htmlFor="email">Email</label>
-                    <input onChange={(e) => setUser({ ...user, email: e.target.value })} className="form-login" placeholder="Ingrese su Email" type="email" name="email" id="email" />
-                    <label htmlFor="password">Password</label>
-                    <input onChange={(e) => setUser({ ...user, password: e.target.value })}  className="form-login" placeholder="Contraseña" type="password" name="password" id="password" />
-
-
-                    <div className="flex items-center justify-center gap-20 mt-10">
-                        <button
-                            onClick={handleSubmit}
-                            className="button-login text-white font-bold py-1.5 px-4 rounded "
-                            type="submit"
-                        >
-                            Sign In
-                        </button>
-                        <a
-                            onClick={handleResetPassword}
-                            className="a-login align-baseline font-bold text-sm"
-                            href="#!"
-                        >
-                            Forgot Password?
-                        </a>
+            {
+                user
+                    ? <div>
+                        <h2>Welcome{user.email}</h2>
+                        <button onClick={handleLogout} className="boton-log-out">LogOut</button>
                     </div>
-                </form>
+                    : <div>
+                        <div className="div-form-login">
+
+                            <form className="container formulario-login" onSubmit={handleSubmit}>
+                                <label htmlFor="email">Email</label>
+                                <input onChange={(e) => setUser({ ...user, email: e.target.value })} className="form-login" placeholder="Ingrese su Email" type="email" name="email" id="email" />
+                                <label htmlFor="password">Password</label>
+                                <input onChange={(e) => setUser({ ...user, password: e.target.value })} className="form-login" placeholder="Contraseña" type="password" name="password" id="password" />
 
 
-            </div>
-            <div className="div-google-login">
+                                <div className="flex items-center justify-center gap-20 mt-10">
+                                    <button
+                                        onClick={handleSubmit}
+                                        className="button-login text-white font-bold py-1.5 px-4 rounded "
+                                        type="submit"
+                                    >
+                                        Sign In
+                                    </button>
+                                    <a
+                                        onClick={handleResetPassword}
+                                        className="a-login align-baseline font-bold text-sm"
+                                        href="#!"
+                                    >
+                                        Forgot Password?
+                                    </a>
+                                </div>
+                            </form>
 
-                <button
-                    onClick={handleGoogleSignin}
-                    className="button-login-google"
-                >
-                    Google login
-                </button>
-                <p className="my-4 flex justify-between px-3">
-                    Don't have an account?
-                    <Link to="/register" className="link-to-register">
-                        Register
-                    </Link>
-                </p>
 
-                <button onClick={handleLogout} className="boton-log-out">LogOut</button>
+                        </div>
+                        <div className="div-google-login">
+
+                            <button
+                                onClick={handleGoogleSignin}
+                                className="button-login-google"
+                            >
+                                Google login
+                            </button>
+                            <p className="my-4 flex justify-between px-3">
+                                Don't have an account?
+                                <Link to="/register" className="link-to-register">
+                                    Register
+                                </Link>
+                            </p>
 
 
-            </div>
 
-                {
-                    user
-                    ? <h2>Welcome {user.email}</h2>
-                    :<p></p>
-                }
+
+                        </div>
+                    </div>
+            }
+
+
+
+
 
         </section>
     )
