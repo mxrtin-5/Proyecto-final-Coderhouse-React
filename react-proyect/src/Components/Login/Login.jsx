@@ -1,19 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import { useAuth } from "../../hooks/useAuth"
-import { Alert } from "../Alerts/Alerts"
-import * as Yup from 'yup'
 import './Login.css'
-
-
-
-const schema = Yup.object().shape({
-    email: Yup.string()
-        .required("Este campo es obligatorio")
-        .email("El email es inválido"),
-    password: Yup.string()
-        .required("Este campo es obligatorio")
-})
 
 
 export function Login() {
@@ -124,7 +112,7 @@ export function Login() {
                 {
                     user
                     ? <h2>Welcome {user.email}</h2>
-                    :''
+                    :<p></p>
                 }
 
         </section>
