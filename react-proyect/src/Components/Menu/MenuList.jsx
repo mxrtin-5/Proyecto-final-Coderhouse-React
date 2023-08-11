@@ -22,10 +22,11 @@ export const MenuList = () => {
         <nav ref={navRef} onClick={(e) => e.stopPropagation()}  className="menulist">
             
             <Link onClick={showNavbar} className="menulist__link active" to="/">Inicio</Link>
-            <Link onClick={showNavbar} className="menulist__link" to="/productos/verduleria">Verduleria</Link>
-            <Link onClick={showNavbar} className="menulist__link" to="/productos/perfumeria">Perfumeria</Link>
-            <Link onClick={showNavbar} className="menulist__link" to="/productos/carniceria">Carniceria</Link>
-            <Link onClick={showNavbar} className="menulist__link" to="/productos/panaderia">Panaderia</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/hileras-de-bolas">Hilera de bolas</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/manguitos">Manguito</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/combinados">Combinados</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/agujas">Agujas</Link>
+            <Link onClick={showNavbar} className="menulist__link" to="/productos/rodillos">Rodillo</Link>
             <Link onClick={showNavbar} className="menulist__link" to="/contacto">Contacto</Link>
             <button
 					className="nav-btn nav-close-btn"
