@@ -13,6 +13,7 @@ input{
     width: 100%;
     height: 40px;
     margin-top: 20PX;
+    color: black;
 }
 
 input:focus{
@@ -63,4 +64,8 @@ input:focus{
 
 .checkout-form-field:focus{
     outline: none;
+}
+
+.checkout-form-field{
+    color: black;
 }

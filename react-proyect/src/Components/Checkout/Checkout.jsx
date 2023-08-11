@@ -1,12 +1,10 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
-import { collection, where, query, addDoc, updateDoc, doc, getDoc, writeBatch, documentId, getDocs} from "firebase/firestore"
+import { collection, where, query, addDoc, writeBatch, documentId, getDocs} from "firebase/firestore"
 import { db } from '../../firebase/config'
 import { Link, Navigate} from 'react-router-dom'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
 import './Checkout.css'
 
 
@@ -34,8 +32,6 @@ export const Checkout = () =>{
 
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState(null)
-
-    const mySwal = withReactContent(Swal)
 
     const handleSubmit = async (values) =>{
         setLoading(true)
@@ -123,7 +119,7 @@ export const Checkout = () =>{
             >
 
             {() =>(
-                <Form>
+                <Form className="form-container-field">
                         <Field className="checkout-form-field" placeholder="Tu nombre" type="text" name="nombre"/>
                         <ErrorMessage name="nombre" component="p"/>
                         <Field className="checkout-form-field" placeholder="Tu direccion" type="text" name="direccion"/>
