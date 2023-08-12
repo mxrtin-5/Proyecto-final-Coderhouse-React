@@ -16,7 +16,6 @@
 .contenedor-titulo-presentacion{
     display:grid;
     place-items: center;
-    
 }
 
 .titulo-presentacion{
@@ -28,9 +27,11 @@
 }
 
 .subtitulo-presentacion{
-    color: rgb(162, 40, 233);
+    border-radius: 25px;
+    color: rgb(105, 22, 153);
     position: absolute;
     left: 15px;
-    margin-top: 4em;
+    margin-top: 6em;
     font-size: 2em;
+    background-color: rgba(199, 198, 195, 0.815);
 }

@@ -10,7 +10,7 @@ export const Presentation = () =>{
                 
                     <div className='contenedor-titulo-presentacion'>
                         <h1 className='titulo-presentacion' >Revolution</h1>
-                        <p className='subtitulo-presentacion'>Precision and Performance in Motion: Soluciones de Rodamientos Innovadores para Impulsar tu Éxito</p>
+                        <p className='subtitulo-presentacion'>Precision and Performance in Motion:<br/> Soluciones de Rodamientos Innovadores para Impulsar tu Éxito</p>
                     </div>
                 
             </div>
