@@ -37,24 +37,34 @@ export const ItemDetail = ({ item }) => {
 
             {
                 isInCart(item.id) ?
-                <div>                        
-                    <button                  
-                    onClick={mySwal.fire({   
-                        title: <strong>Articulo agregado</strong>,
-                        html: <i>El articulo se agrego correctamente al carrito</i>,
-                        icon: 'success'
-                    })}
-                    className='btn-terminar'>
-                </button>
-                <Link className='btn-terminar-compra' to="/cart" >
-                        Terminar mi compra
-                    </Link>
-                </div>                                
-    : <ItemCount max={item.stock}
-        initial={1} 
-        agregar={handleAgregar}
-    />
-}
+                    <div>
+                        {
+                            item.stock < 1 ? <strong>No hay stock</strong>
+                                : <button
+                                    onClick={() =>
+                                        mySwal.fire({
+                                            title: <strong>Articulo agregado</strong>,
+                                            html: <i>El articulo se agrego correctamente al carrito</i>,
+                                            icon: 'success'
+                                        })
+                                    }
+                                    className='btn-terminar'
+                                >
+                                    <Link className='btn-terminar-compra' to="/cart">
+                                        Terminar mi compra
+                                    </Link>
+                                </button>
+                        }
+
+
+                    </div>
+                    : <ItemCount max={item.stock}
+                        initial={1}
+                        setCounter={setCounter}
+                        counter={counter}
+                        agregar={handleAgregar}
+                    />
+            }
 
         </div >
     )

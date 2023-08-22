@@ -31,17 +31,9 @@
     background-color: rgb(113, 20, 201);
 }
 
-.btn-terminar-compra{
+.btn-terminar .btn-terminar-compra{
     text-decoration: none;
     color: white;
-    background-color: blueviolet;
-    padding: 15px;
-    border-radius: 10px;
-    transition: all .3s ease;
-}
-
-.btn-terminar-compra:hover{
-    background-color: rgb(113, 20, 201);
 }
 
 .p-detail{
