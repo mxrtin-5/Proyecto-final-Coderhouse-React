@@ -4,6 +4,7 @@
     right: 5%;
     background-color: #dbd5d5cc;
     z-index: 1;
+    width: 100%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 20px;
@@ -74,7 +75,7 @@
     height: 20px;
     cursor: pointer;
     position: relative;
-    top: 25px;
+    top: 15px;
     transition: all .3s;
 }
 
@@ -120,4 +121,14 @@
 .btn-terminar-compra-cart a{
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 400px) {
+    .container-cart-products{
+        right: 0;
+    }
+
+    .cart-products{
+        width: auto;
+    }
 }

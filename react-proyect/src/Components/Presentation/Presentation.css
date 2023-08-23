@@ -6,7 +6,7 @@
 }
 
 #img-portada{
-    background-image: url('./descarga_ml_resize_x4.jpg');
+    background-image: url('/descarga_ml_resize_x4.jpg');
     width: 99vw;
     background-repeat: no-repeat;
     background-size: cover;
