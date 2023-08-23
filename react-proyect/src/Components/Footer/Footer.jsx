@@ -27,9 +27,9 @@ export const Footer = () =>{
             <div className='contactanos'>
                 <h4>Contactanos</h4>
                 <div className='contenedor-contactanos'>
-                    <p className='p-icono'><SiWhatsapp /> 548113917</p>
-                    <p className='p-icono'> <BsTelephoneFill />548113917</p>
-                    <p className='p-icono'> <BiLogoGmail />ejemplo@gmail.com</p>
+                    <p className='p-icono'><SiWhatsapp className='icon' /> 548113917</p>
+                    <p className='p-icono'> <BsTelephoneFill className='icon' />548113917</p>
+                    <p className='p-icono'> <BiLogoGmail className='icon' />ejemplo@gmail.com</p>
                 </div>
                 
             </div>

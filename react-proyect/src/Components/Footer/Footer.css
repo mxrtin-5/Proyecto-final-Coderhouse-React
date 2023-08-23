@@ -1,65 +1,79 @@
-.footer{
+.footer {
     display: flex;
+    flex-direction: column;
+    /* Stack sections vertically */
     align-items: center;
     justify-content: center;
     background-color: black;
-    padding: 80px;
-    width: 100%;
-    height: 100%;
-    font-family:'Times New Roman', Times, serif ;
+    padding: 50px 20px;
+    /* Adjust padding for better spacing on smaller screens */
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
 }
 
-.categories{
-    position: absolute;
-    left: 10%;
-}
-
-.conectados{
-    position: absolute;
-    right: 10%;
-}
-
-.p-icono{
+.footer-content {
     display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+    gap: 20px;
+    /* Add gap between columns */
+    margin-top: 20px;
+    /* Add spacing between sections */
+    justify-content: center;
+    /* Center the sections horizontally */
+}
+
+.contenedor-contactanos{
+    display:grid;
+}
+
+.icon{
+    position: absolute;
+    left: 25%;
+}
+
+.p-icono {
+    margin-top: 10px;
+    /* Adjust margin for smaller spacing */
+}
+
+.categorias {
+    text-decoration: none;
+    color: #eee;
+    transition: 0.3s;
+    display: block;
+    /* Ensure links take the full width */
+}
+
+.categorias:hover {
+    color: blueviolet;
+}
+
+.container-facebook {
+    display: flex;
+    justify-content: center;
+    /* Center the social icons */
+    gap: 20px;
+    font-size: 24px;
+    /* Adjust font size for smaller screens */
     margin-top: 20px;
 }
 
-.categorias{
-    text-decoration: none;
-    color: #eee;
-    transition: .3s;
-}
-
-.categorias:hover{
-    color: blueviolet;
-}
-
-.container-facebook{
-    display: flex;
-    gap: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: blueviolet;
-    transition:.5s ease all;
-}
-
-.iconos-facebook-ig{
+.iconos-facebook-ig {
     color: white;
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
-.iconos-facebook-ig:hover{
+.iconos-facebook-ig:hover {
     color: blueviolet;
 }
 
-@media only screen and (max-width: 660px){
-    .footer{
-        text-align:center;
-    }
-
-    .categories,
-    .contactanos, 
-    .conectados{
-        margin:-2em;
+@media only screen and (max-width: 660px) {
+    .footer-content {
+        flex-direction: column;
+        /* Stack sections on smaller screens */
+        gap: 10px;
+        /* Adjust gap for better spacing */
     }
 }
