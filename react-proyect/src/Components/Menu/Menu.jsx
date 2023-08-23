@@ -1,7 +1,5 @@
 import { MenuList } from './MenuList'
-import { useContext, useState } from 'react'
-import { CartContext } from "../../context/CartContext"
-import { UserWidget } from '../UserWidget/UserWidget'
+import { useState } from 'react'
 import './Menu.css'
 import CartIcon from '../CartIcon/CartIcon'
 import { CartView } from '../CartView/CartView'
@@ -11,10 +9,9 @@ export const Menu = () => {
     const [showMenu, setShowMenu] = useState(false)
     const [active, setActive] = useState(false)
 
-    const { cart } = useContext(CartContext)
 
     const handleClose = () => {
-        setShowMenu(false)
+        setShowMenu(!showMenu)
     }
 
     return (
@@ -25,9 +22,6 @@ export const Menu = () => {
 
 
                 <MenuList close={handleClose} />
-
-                <UserWidget />
-
 
                 <div onClick={() => setActive(!active)} className='cart-widget-container'>
                     <CartIcon />

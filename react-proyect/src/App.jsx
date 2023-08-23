@@ -10,10 +10,7 @@ import { CartProvider } from './context/CartContext';
 import { CartView } from './Components/CartView/CartView';
 import { ErrorPage } from './Components/ErrorPage/ErrorPage';
 import { Footer } from './Components/Footer/Footer';
-import { Login } from './Components/Login/Login';
-import { Register } from './Components/Register/Register';
 import { AuthProvider } from './context/authContext';
-import { ProtectedRoute } from './Components/ProtectedRoute/ProtectedRoute';
 
 
 
@@ -33,15 +30,9 @@ function App() {
 
             <Routes>
 
-                  <Route path='/' element={ <ProtectedRoute>
-                    <ItemListContainer/>
-                  </ProtectedRoute> } />
-                  <Route path='/productos/:categoryId' element={ <ProtectedRoute>
-                    <ItemListContainer/>
-                  </ProtectedRoute> } />
+                  <Route path='/' element={<ItemListContainer/>} />
+                  <Route path='/productos/:categoryId' element={ <ItemListContainer/>} />
                   <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }   />
-                  <Route path='/user' element={< Login/>}/>
-                  <Route path='/register' element={ <Register/> } />
                   <Route path='/contacto' element={ <Contacto/> } />
                   <Route path='/cart' element={ <CartView /> } />
                   <Route path='*' element={ <ErrorPage/> } />

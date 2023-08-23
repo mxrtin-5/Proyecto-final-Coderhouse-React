@@ -1,50 +1,56 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    font-family:'Times New Roman', Times, serif ;
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-family: 'Times New Roman', Times, serif;
 }
 
-body{
-    background-color: rgb(24, 24, 24);
-    color: white;
+body {
+	background-color: rgb(24, 24, 24);
+	color: white;
 }
 
-.header-header{
+.header-header {
 	position: sticky;
 	top: 0;
 	z-index: 100000000;
 	background-color: rgb(24, 24, 24);
 }
 
-.header_container{
-    display: flex;
+.header_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	height: 10vh;
 	padding: 0 2rem;
-    font-family:'Times New Roman', Times, serif ;
+	font-family: 'Times New Roman', Times, serif;
 }
 
-.title{
-    display:flex;
-    align-items: center;
-    margin-left: 20px ;
-    justify-content: space-between;
-    font-size: 40px;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
+.title {
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+	justify-content: space-between;
+	font-size: 40px;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
 }
 
-.title-content{
-    text-decoration: none;
-    color: white;
-    transition: all .4s ease-in-out;
+.title-content {
+	text-decoration: none;
+	color: white;
+	transition: all .4s ease-in-out;
 }
 
-.title-content:hover{
-    color: rgb(112, 29, 189);
+.title-content:hover {
+	color: rgb(112, 29, 189);
 }
 
 .header_container div,
@@ -59,7 +65,7 @@ body{
 		opacity: 1;
 	}
 
-	.header_container .menulist{
+	.header_container .menulist {
 		position: fixed;
 		top: -100vh;
 		left: 0;
@@ -69,8 +75,8 @@ body{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-        background-color: rgba(61, 21, 99, 0.808);
-        z-index: 100;
+		background-color: rgba(61, 21, 99, 0.808);
+		z-index: 100;
 		gap: 1.5rem;
 		transition: 1s;
 	}
