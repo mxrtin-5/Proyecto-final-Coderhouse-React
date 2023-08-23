@@ -32,7 +32,6 @@ export const ItemDetail = ({ item }) => {
         <div className="container my-5">
             <h2>{item.name}</h2>
             <img className='imagen' src={item.img} alt={item.name} />
-            <p className='p-detail'>Precio: ${item.price}</p>
 
 
             {

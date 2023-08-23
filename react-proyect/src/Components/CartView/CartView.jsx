@@ -29,11 +29,7 @@ export const CartView = () => {
 
             
 
-            <div className="seccion-teminar-compra">
-                <h4 className="text-total-cart text-3xl my-2">Total: ${totalCompra()}</h4>
-                <button onClick={vaciarCarrito} className="btn btn-vaciar-cart">Vaciar carrito</button>
-                <button><Link className="btn btn-terminar-compra-cart" to={'/checkout'}> Terminar mi compra </Link></button>
-            </div>
+            
         </div>
     )
 }

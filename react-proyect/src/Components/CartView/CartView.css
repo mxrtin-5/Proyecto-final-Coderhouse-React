@@ -29,13 +29,7 @@
     color: white;
 }
 
-.btn-terminar-compra-cart{
-    height: 90px;
-    width: 90px;
-    border-radius: 10px;
-    background-color: blueviolet;
-    transition: .3s ease;
-}
+
 
 .btn-terminar-compra-cart:hover{
     background-color: rgb(111, 36, 182);
