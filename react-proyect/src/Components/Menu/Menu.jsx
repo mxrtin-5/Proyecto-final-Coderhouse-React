@@ -26,9 +26,11 @@ export const Menu = ({isOpen, onClose}) => {
 
                 <div onClick={() => setActive(!active)} className='cart-widget-container'>
                     <CartIcon />
+
+                    {active && <CartView />}
                 </div>
 
-                {active && <CartView />}
+                
 
             </div>
 

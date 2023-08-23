@@ -53,4 +53,12 @@
 		opacity: 1;
 	}
 
+	.menu__backdrop{
+		gap: 10px;
+	}
+	
+	.cart-widget-container{
+		margin-right: -20px;
+	}
+
 }

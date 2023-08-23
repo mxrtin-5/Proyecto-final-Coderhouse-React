@@ -15,7 +15,6 @@ export const MenuList = () => {
 
     const handleCloseMenu = () => {
         navRef.current.classList.remove("responsive_nav");
-        close()
     };
 
 

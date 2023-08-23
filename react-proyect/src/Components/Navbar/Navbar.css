@@ -82,6 +82,10 @@ body {
 		transition: 1s;
 	}
 
+	.title{
+		margin-left: -25px;
+	}
+
 	.header_container .responsive_nav {
 		transform: translateY(100vh);
 	}
