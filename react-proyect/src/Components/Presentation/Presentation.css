@@ -2,14 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 60vh;
 }
 
 #img-portada{
     background-image: url('../../../public/descarga_ml_resize_x4.jpg');
-    height: 60vh;
     width: 99vw;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
 }
 
@@ -20,10 +20,11 @@
 
 .titulo-presentacion{
     position: absolute;
-    font-size: 6em;
+    font-size: 3.5em;
     left: 10px;
     color: black;
     font-family:'Times New Roman', Times, serif ;
+    margin-bottom: 0.5em;
 }
 
 .subtitulo-presentacion{
@@ -32,6 +33,6 @@
     position: absolute;
     left: 15px;
     margin-top: 6em;
-    font-size: 2em;
-    background-color: rgba(199, 198, 195, 0.815);
+    padding: 0.5em;
+    font-size:1.2em;
 }
