@@ -9,6 +9,7 @@
 body {
 	background-color: rgb(24, 24, 24);
 	color: white;
+	overflow-x: hidden;
 }
 
 .header-header {
