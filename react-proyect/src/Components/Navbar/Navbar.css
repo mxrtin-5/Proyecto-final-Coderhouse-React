@@ -11,6 +11,13 @@ body{
     color: white;
 }
 
+.header-header{
+	position: sticky;
+	top: 0;
+	z-index: 100000000;
+	background-color: rgb(24, 24, 24);
+}
+
 .header_container{
     display: flex;
 	align-items: center;

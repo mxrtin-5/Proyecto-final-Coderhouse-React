@@ -7,7 +7,7 @@ export const Navbar = () =>{
 
     return(
 
-        <header>
+        <header className='header-header'>
             <div className='header_container'>
                 <h2 className='title'> <Link className='title-content' to={'/'}>AceleraBearings</Link> </h2>
                 

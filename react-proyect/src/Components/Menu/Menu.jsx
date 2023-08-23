@@ -4,13 +4,14 @@ import { CartContext } from "../../context/CartContext"
 import { UserWidget } from '../UserWidget/UserWidget'
 import './Menu.css'
 import CartIcon from '../CartIcon/CartIcon'
+import { CartView } from '../CartView/CartView'
 
 
 export const Menu = () => {
     const [showMenu, setShowMenu] = useState(false)
     const [active, setActive] = useState(false)
 
-    const { cart, totalCompra, vaciarCarrito, removerDelCarrito } = useContext(CartContext)
+    const { cart } = useContext(CartContext)
 
     const handleClose = () => {
         setShowMenu(false)
@@ -31,6 +32,8 @@ export const Menu = () => {
                 <div onClick={() => setActive(!active)} className='cart-widget-container'>
                     <CartIcon />
                 </div>
+
+                {active && <CartView />}
 
             </div>
 

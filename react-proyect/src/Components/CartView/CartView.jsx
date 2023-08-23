@@ -1,35 +1,56 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { FaTrashAlt } from 'react-icons/fa'
-import { Link } from "react-router-dom"
 import './CartView.css'
 
 
 export const CartView = () => {
-    const { cart, totalCompra, vaciarCarrito, removerDelCarrito } = useContext(CartContext)
+    const { cart, removerDelCarrito, vaciarCarrito } = useContext(CartContext)
+
+    const generateWhatsAppLink = (cart) => {
+        const phoneNumber = '+5491121877162'; // Replace with your WhatsApp phone number
+        const productsMessage = generateProductsMessage(cart);
+        const encodedMessage = encodeURIComponent(productsMessage);
+        return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    };
+    
+    const generateProductsMessage = (cart) => {
+        const productLines = cart.map((product) => {
+            return `${product.name} - Cantidad: ${product.counter}`;
+        });
+        return `Hola, estoy interesado en los siguientes productos: ${productLines.join(' ')}`;
+    };
 
     return (
-        <div className="container-cart">
-            <h2 className="text-compra text-4xl">Tu compra</h2>
-            <hr/>
-            <div className="container-imgs">
-                {
-                    cart.map((item) => (
-                        <div className="datos-prods" key={item.id}>
-                            <h3>{item.name}</h3>
-                            <img className="imagen-detail-prods" src={item.img} alt={item.name}/>
-                            <p className="p-detail-compra">Precio: ${item.price * item.counter}</p>
-                            <p className="p-detail-compra">Cantidad: {item.counter}</p>
-                            <button onClick={() => removerDelCarrito(item.id)} className="btn btn-danger"><FaTrashAlt/></button>
-                            <hr/>
-                        </div>
-                    ))
-                }
+        <div className='container-cart-products'>
+            <h2>Carrito de Compra</h2>
+            <div className='cart-products'>
+            {cart.length === 0 ? (
+            <p>No hay productos en el carrito</p>
+        ) : (
+            cart.map((product) => (
+                <div key={product.id} className='cart-product'>
+                    <img src={product.img} alt={product.name} className='product-image' />
+                    <div className='info-cart-product'>
+                        <div className='titulo-producto-carrito'>{product.name}</div>
+                        <div className='precio-producto-carrito'>${product.price}</div>
+                        <div className='cantidad-producto-carrito'>Cantidad: {product.counter}</div>
+                    </div>
+                    <div className='icon-close' onClick={() => removerDelCarrito(product.id)}>
+                        <FaTrashAlt />
+                    </div>
+                </div>
+            ))
+        )}
+                {cart.length > 0 && (
+                    <div className='cart-total'>
+                        <button onClick={vaciarCarrito} className='btn-terminar-compra-cart'> <a target='_blank' href={generateWhatsAppLink(cart)}>Terminar Compra</a> </button>
+                    </div>
+                )}
+
             </div>
 
-            
 
-            
         </div>
     )
 }

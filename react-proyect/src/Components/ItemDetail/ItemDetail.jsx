@@ -2,7 +2,6 @@ import { useContext, useState } from 'react'
 import { ItemCount } from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import { CartContext } from '../../context/CartContext'
-import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
@@ -22,9 +21,18 @@ export const ItemDetail = ({ item }) => {
         const newItem = {
             ...item,
             counter
-        }
+        };
 
-        agregarAlCarrito(newItem)
+        if(!isInCart(item.id)){
+            agregarAlCarrito(newItem)
+        }else{
+            mySwal.fire({
+                icon: 'warning',
+                title: 'Producto ya en el carrito',
+                text: 'Este producto ya ha sido agregado al carrito.',
+                confirmButtonText: 'Ok',
+            });
+        }
     }
 
 
@@ -34,36 +42,13 @@ export const ItemDetail = ({ item }) => {
             <img className='imagen' src={item.img} alt={item.name} />
 
 
-            {
-                isInCart(item.id) ?
-                    <div>
-                        {
-                            item.stock < 1 ? <strong>No hay stock</strong>
-                                : <button
-                                    onClick={() =>
-                                        mySwal.fire({
-                                            title: <strong>Articulo agregado</strong>,
-                                            html: <i>El articulo se agrego correctamente al carrito</i>,
-                                            icon: 'success'
-                                        })
-                                    }
-                                    className='btn-terminar'
-                                >
-                                    <Link className='btn-terminar-compra' to="/cart">
-                                        Terminar mi compra
-                                    </Link>
-                                </button>
-                        }
-
-
-                    </div>
-                    : <ItemCount max={item.stock}
+            <ItemCount max={item.stock}
                         initial={1}
                         setCounter={setCounter}
                         counter={counter}
                         agregar={handleAgregar}
                     />
-            }
+            
 
         </div >
     )
