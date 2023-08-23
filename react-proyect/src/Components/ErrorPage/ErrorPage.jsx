@@ -1,4 +1,4 @@
-import Error from '../../assets/img1.svg'
+import Error from '../../../public/img1.svg'
 import { Link } from 'react-router-dom'
 import './ErrorPage.css'
 
