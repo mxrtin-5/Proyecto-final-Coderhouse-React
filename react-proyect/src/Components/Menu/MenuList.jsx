@@ -39,9 +39,9 @@ export const MenuList = () => {
             </nav>
 
             <button
-                className="nav-btn"
+                className="nav-btn menu-btn"
                 onClick={showNavbar}>
-                <BiMenu />
+                <BiMenu className='menu-icon' />
             </button>
 
         </div>

@@ -26,11 +26,31 @@
 	font-size: 1.8rem;
 }
 
-.nav-btn{
-	display: block; /* Mostrar solo en dispositivos móviles */
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: #333;
+.menu-btn{
+	opacity: 0;
+}
+
+@media only screen and (max-width: 1400px) {
+	.menulist {
+		position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+		z-index: 100;
+		gap: 1.5rem;
+        background-color: #333333d0;
+        transform: translateY(-100%);
+	}
+
+	.menu-btn{
+		opacity: 1;
+	}
+
 }

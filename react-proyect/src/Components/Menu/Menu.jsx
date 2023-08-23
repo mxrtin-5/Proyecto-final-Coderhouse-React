@@ -12,6 +12,7 @@ export const Menu = () => {
 
     const handleClose = () => {
         setShowMenu(!showMenu)
+        setActive(!active)
     }
 
     return (
