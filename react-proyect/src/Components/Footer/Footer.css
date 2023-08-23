@@ -65,11 +65,16 @@
     .footer {
         display: block; /* Change to block display for stacking */
         text-align: center;
+        padding: 10vh 0;
+        font-size: 14px;
     }
 
     .categories,
     .contactanos,
     .conectados {
-        margin: 10px 0; /* Adjust margin for spacing */
+        position: static; /* Cambia a position: static para que los elementos fluyan naturalmente */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Adjust margin for spacing */
     }
 }
