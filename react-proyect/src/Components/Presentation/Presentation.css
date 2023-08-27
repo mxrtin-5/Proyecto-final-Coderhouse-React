@@ -1,38 +1,37 @@
-.contenedor-portada{
+.contenedor-portada {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    flex-direction: column;
+    position: relative;
+    height: 80vh;
+    width: 100%;
 }
 
-#img-portada{
-    background-image: url('/descarga_ml_resize_x4.jpg');
-    width: 99vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.contenedor-titulo-presentacion{
-    display:grid;
-    place-items: center;
-}
-
-.titulo-presentacion{
+.literalmente-la-imagen {
+    width: 100vw;
+    height: 100%; /* Para mantener la proporción de la imagen */
+    object-fit: cover; /* Ajustar la imagen de fondo manteniendo la relación de aspecto */
     position: absolute;
+    z-index: -1; /* Colocamos la imagen detrás del contenido */
+    filter: brightness(50%);
+}
+
+.contenedor-titulo-presentacion {
+    text-align: center; /* Centrar horizontalmente el contenido */
+    margin-top: 1em; /* Ajustar el margen superior */
+}
+
+.titulo-presentacion {
     font-size: 3.5em;
-    left: 10px;
     color: black;
-    font-family:'Times New Roman', Times, serif ;
-    margin-bottom: 0.5em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0.2em; /* Reducir el margen inferior */
 }
 
-.subtitulo-presentacion{
-    border-radius: 25px;
-    color: rgb(105, 22, 153);
-    position: absolute;
-    left: 15px;
-    margin-top: 6em;
-    padding: 0.5em;
-    font-size:1.2em;
+.subtitulo-presentacion {
+    color: blueviolet;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 0.5em; /* Ajustar el margen superior */
 }
