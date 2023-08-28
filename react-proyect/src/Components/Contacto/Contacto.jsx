@@ -1,8 +1,7 @@
 import { useState } from "react"
-import { collection, where, query, addDoc, updateDoc, doc, getDoc, writeBatch, documentId, getDocs} from "firebase/firestore"
+import { collection, addDoc} from "firebase/firestore"
 import { db } from '../../firebase/config'
-import { Link, Navigate} from 'react-router-dom'
-import { Formik, Form, Field, ErrorMessage, useFormik } from 'formik'
+import { Formik, Form, Field, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import './Contacto.css'
 
