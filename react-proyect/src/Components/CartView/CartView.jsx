@@ -36,8 +36,8 @@ export const CartView = () => {
                                 <div className='precio-producto-carrito'>${product.price}</div>
                                 <div className='cantidad-producto-carrito'>{product.counter}</div>
                             </div>
-                            <div className='icon-close' onClick={() => removerDelCarrito(product.id)}>
-                                <FaTrashAlt />
+                            <div className='icon-close' >
+                                <FaTrashAlt onClick={() => removerDelCarrito(product.id)} />
                             </div>
                         </div>
                     ))
