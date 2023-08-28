@@ -29,6 +29,10 @@
     padding-top: 20%;
 }
 
+.cart-products p{
+    margin-top: 20px;
+}
+
 .cart-product {
     background-color: #949191ee;
     padding: 10px 0;
