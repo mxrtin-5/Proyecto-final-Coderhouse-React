@@ -46,6 +46,7 @@
     transform: scale(0.9);
 }
 
-.container-prod p{
+.container-productos p{
     text-align: center;
+    width: 400px;
 }
