@@ -51,14 +51,16 @@
 
 	.menu-btn{
 		opacity: 1;
+		width: auto;
+		height: auto;
 	}
 
 	.menu__backdrop{
-		gap: 10px;
+		gap: 20px;
 	}
 	
 	.cart-widget-container{
-		margin-right: -20px;
+		margin-left: 20px;
 	}
 
 }

@@ -1,4 +1,3 @@
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar } from './Components/Navbar/Navbar'
 import {ItemListContainer}  from './Components/ItemListContainer/ItemListContainer'
@@ -11,7 +10,7 @@ import { CartView } from './Components/CartView/CartView';
 import { ErrorPage } from './Components/ErrorPage/ErrorPage';
 import { Footer } from './Components/Footer/Footer';
 import { AuthProvider } from './context/authContext';
-
+import './App.css'
 
 
 function App() {

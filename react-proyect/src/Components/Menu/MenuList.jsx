@@ -40,7 +40,7 @@ export const MenuList = () => {
             <button
                 className="nav-btn menu-btn"
                 onClick={showNavbar}>
-                <BiMenu className='menu-icon' />
+                <BiMenu />
             </button>
 
         </div>

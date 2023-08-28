@@ -5,7 +5,7 @@ import CartIcon from '../CartIcon/CartIcon'
 import { CartView } from '../CartView/CartView'
 
 
-export const Menu = ({isOpen, onClose}) => {
+export const Menu = ({ isOpen, onClose }) => {
     const [showMenu, setShowMenu] = useState(false)
     const [active, setActive] = useState(false)
 
@@ -16,27 +16,25 @@ export const Menu = ({isOpen, onClose}) => {
     }
 
     return (
-        <div className={isOpen ? "menu-active" : ""}>
+        <div>
+            <div >
 
 
-            <div className='menu__backdrop' onClick={handleClose}>
+                <div className='menu__backdrop'>
 
+                    <MenuList onClick={handleClose} close={onClose} />
 
-                <MenuList close={onClose} />
-
-                <div onClick={() => setActive(!active)} className='cart-widget-container'>
-                    <CartIcon />
-
-                    {active && <CartView />}
                 </div>
-
-                
 
             </div>
 
+                <div onClick={() => setActive(!active)} className='cart-widget-container'>
+                    <CartIcon onClick />
 
-
+                    {active && <CartView />}
+                </div>
         </div>
+
 
 
     )
