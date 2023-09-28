@@ -15,11 +15,12 @@ export const Footer = () =>{
             <div className='categories'>
                     <h4>Categorias</h4>
                     <Link className='categorias' to={'/'}><p>Inicio</p></Link>
-                    <Link  className='categorias'to='/productos/hileras-de-bolas'><p>Hilera de bolas</p></Link>
-                    <Link  className='categorias'to='/productos/manguitos'><p >Manguito</p></Link>
+                    <Link  className='categorias'to='/productos/rodillos'><p >Rodillos</p></Link>
                     <Link  className='categorias'to='/productos/combinados'><p >Combinados</p></Link>
+                    <Link  className='categorias'to='/productos/lineales'><p >Lineales</p></Link>
+                    <Link  className='categorias'to='/productos/manguitos'><p >Manguito</p></Link>
+                    <Link  className='categorias'to='/productos/hileras-de-bolas'><p>Bolas</p></Link>
                     <Link  className='categorias'to='/productos/agujas'><p >Agujas</p></Link>
-                    <Link  className='categorias'to='/productos/rodillos'><p >Rodillo</p></Link>
                     <Link className='categorias' to={'/contacto'}><p>Contacto</p></Link>
                     
                 </div>

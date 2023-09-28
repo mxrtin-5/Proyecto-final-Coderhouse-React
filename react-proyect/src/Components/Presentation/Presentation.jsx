@@ -10,8 +10,8 @@ export const Presentation = () =>{
                 
                 <img src="/descarga_ml_resize_x4.jpg" className='literalmente-la-imagen' />
                     <div className='contenedor-titulo-presentacion'>
-                        <h1 className='titulo-presentacion' >Revolution</h1>
-                        <p className='subtitulo-presentacion'>Precision and Performance in Motion:<br/> Soluciones de Rodamientos Innovadores para Impulsar tu Éxito</p>
+                        <h1 className='titulo-presentacion' >Rodamientos de Alta Calidad: Tu Fuente Confiable para Componentes de Precisión</h1>
+                        <p className='subtitulo-presentacion'>Descubre la Variedad y Durabilidad de Nuestra Gama de Rodamientos Industriales</p>
                     </div>
                 
             </div>

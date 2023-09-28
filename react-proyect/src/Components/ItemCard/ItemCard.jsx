@@ -9,7 +9,7 @@ export const ItemCard = ({ item }) => {
             <div className='container-productos container'>
                 <h4 className='title-prod'>{item.name}</h4>
                 <img className='imagen' src={item.img} alt="" />
-                <p>{item.descripcion}</p>
+                <p className='descripcion'>{item.descripcion}</p>
                 <Link className='btn' to={`/detail/${item.id}`}><button className='btn-prod'>Ver detalles</button></Link>
             </div>
 

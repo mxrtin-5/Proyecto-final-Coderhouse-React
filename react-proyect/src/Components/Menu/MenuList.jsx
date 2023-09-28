@@ -23,13 +23,37 @@ export const MenuList = () => {
 
             <nav ref={navRef} onClick={handleCloseMenu} className="menulist">
 
-                <Link onClick={showNavbar} className="menulist__link active" to="/">Inicio</Link>
-                <Link onClick={showNavbar} className="menulist__link" to="/productos/hileras-de-bolas">Hilera de bolas</Link>
-                <Link onClick={showNavbar} className="menulist__link" to="/productos/manguitos">Manguito</Link>
-                <Link onClick={showNavbar} className="menulist__link" to="/productos/combinados">Combinados</Link>
-                <Link onClick={showNavbar} className="menulist__link" to="/productos/agujas">Agujas</Link>
-                <Link onClick={showNavbar} className="menulist__link" to="/productos/rodillos">Rodillo</Link>
-                <Link onClick={showNavbar} className="menulist__link" to="/contacto">Contacto</Link>
+                <ul className='menulist-items'>
+                    <li>
+                        <Link onClick={showNavbar} className="menulist__link active" to="/">Inicio</Link>
+                    </li>
+
+                    <li>
+                        <Link onClick={showNavbar} className="menulist__link" to="/productos/rodillos">Rodillos</Link>
+                    </li>
+
+                    <li>
+                        <Link onClick={showNavbar} className="menulist__link" to="/productos/combinados">Combinados</Link>
+                    </li>
+
+                    <li>
+                        <Link onClick={showNavbar} className="menulist__link" to="/productos/lineales">Lineales</Link>
+                    </li>
+
+                    <li>
+                        <Link onClick={showNavbar} className="menulist__link" to="/productos/manguitos">Manguitos</Link>
+                    </li>
+
+                    <li><Link onClick={showNavbar} className="menulist__link" to="/productos/hileras-de-bolas">Bolas</Link></li>
+
+                    <li><Link onClick={showNavbar} className="menulist__link" to="/productos/agujas">Agujas</Link></li>
+
+                    <li><Link onClick={showNavbar} className="menulist__link" to="/productos/otros">Otros</Link></li>
+
+                    <li><Link onClick={showNavbar} className="menulist__link" to="/contacto">Contacto</Link></li>
+                </ul>
+
+
                 <button
                     className="nav-btn nav-close-btn"
                     onClick={handleCloseMenu}>
