@@ -20,6 +20,7 @@
 .contenedor-titulo-presentacion {
     text-align: center;
     margin-top: 1em;
+    font-size: 1em;
 }
 
 .titulo-presentacion {
@@ -36,4 +37,13 @@
     font-weight: 600;
     text-align: center;
     margin-top: 0.5em;
+}
+
+
+@media (max-width: 750px) {
+    .contenedor-titulo-presentacion {
+        text-align: center;
+        margin-top: 1em;
+        font-size: 0.5em;
+    }
 }
